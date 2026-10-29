@@ -1,0 +1,41 @@
+[
+ {
+  "scenario": "approve",
+  "args": [
+   "start"
+  ],
+  "returncode": 0,
+  "assignments": []
+ },
+ {
+  "scenario": "approve",
+  "args": [
+   "resume",
+   "approve"
+  ],
+  "returncode": 0,
+  "assignments": [
+   {
+    "issue_id": "ISS-021",
+    "assignee": "이서연"
+   }
+  ]
+ },
+ {
+  "scenario": "reject",
+  "args": [
+   "start"
+  ],
+  "returncode": 0,
+  "assignments": []
+ },
+ {
+  "scenario": "reject",
+  "args": [
+   "resume",
+   "reject"
+  ],
+  "returncode": 0,
+  "assignments": []
+ }
+]

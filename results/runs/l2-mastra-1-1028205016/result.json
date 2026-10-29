@@ -1,0 +1,28 @@
+{
+ "run_id": "l2-mastra-1-1028205016",
+ "batch": "dev",
+ "task": "l2",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 9.77,
+ "llm_calls": 3,
+ "input_tokens": 5153,
+ "output_tokens": 621,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 129,
+ "cost": 0.033032,
+ "first_input_tokens": 1132,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n참고: ISS-014(10-14)와 ISS-021(10-20)은 둘 다 심각도가 critical이어서 생성일이 더 이른 ISS-014를 골랐습니다. ISS-014는 이미 박지훈(배정 2건)이 맡고 있습니다. 이서연은 배정이 1건으로 가장 적어서 추천했습니다.",
+ "regraded": true
+}

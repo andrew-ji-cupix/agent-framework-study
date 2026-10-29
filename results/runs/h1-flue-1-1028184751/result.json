@@ -1,0 +1,24 @@
+{
+ "run_id": "h1-flue-1-1028184751",
+ "batch": "final",
+ "task": "h1",
+ "candidate": "flue",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 16.12,
+ "success": true,
+ "tests_unchanged": true,
+ "pytest": "11 passed in 0.01s",
+ "llm_calls": 4,
+ "input_tokens": 15514,
+ "output_tokens": 1186,
+ "cache_read": 12056,
+ "cache_write": 3448,
+ "reasoning_tokens": 0,
+ "cost": 0.043411,
+ "first_input_tokens": 2026,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

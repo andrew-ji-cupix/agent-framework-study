@@ -1,0 +1,27 @@
+{
+ "run_id": "l1-adk-1-1028204759",
+ "batch": "dev",
+ "task": "l1",
+ "candidate": "adk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 6.09,
+ "success": false,
+ "checks": {
+  "trade": false,
+  "severity": false
+ },
+ "answer": "This panel phase wiring issue belongs under electrical, and given the fire risk it's critical severity — fire_protection category is specifically for suppression systems, not wiring faults like this.\n",
+ "llm_calls": 1,
+ "input_tokens": 279,
+ "output_tokens": 63,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 47,
+ "cost": 0.002376,
+ "first_input_tokens": 279,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

@@ -1,0 +1,27 @@
+{
+ "run_id": "l2-mastra-1-1028214015",
+ "batch": "final",
+ "task": "l2",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 9.52,
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n참고: ISS-014(2026-10-14)는 ISS-021(2026-10-20)과 같은 critical 등급이지만 먼저 생성되었습니다. ISS-014는 이미 진행 중(in_progress)이고 박지훈 님(배정 2건)이 맡고 있습니다. 이서연 님은 전기 작업자 중 배정 건수가 1건으로 가장 적어 추천했습니다.",
+ "llm_calls": 3,
+ "input_tokens": 5153,
+ "output_tokens": 643,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 133,
+ "cost": 0.033472,
+ "first_input_tokens": 1132,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

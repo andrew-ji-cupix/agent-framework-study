@@ -1,0 +1,104 @@
+
+Tool #1: ask_progress_analyst
+
+Tool #2: ask_issue_analyst
+
+Tool #1: get_progress
+I'll search for issues that are either open or currently in progress.
+
+open과 in_progress 상태의 이슈를 동시에 조회하겠습니다.
+Tool #1: search_issues
+
+Tool #2: search_issues
+Looking at the gaps across floors, several stand out as significant: 1F electrical and fire systems show large deficits (14 and 18), 3F has notable plumbing and electrical gaps (12 and 15), and 4F structural is also high at 14. I'm flagging these as the priority areas needing attention.
+
+Since "이번 주" is ambiguous and the search tool lacks date filtering, I'll pull the created_at timestamps for the six critical issues and report them, flagging that I can't confirm they fall within this week without knowing today's reference date.
+
+severity가 critical인 이슈는 6건입니다. 질문에 "이번 주"라는 조건이 있어서 생성일(created_at)을 확인하려고 상세 정보를 조회하겠습니다.
+Tool #3: get_issue
+
+Tool #4: get_issue
+
+Tool #5: get_issue
+
+Tool #6: get_issue
+
+Tool #7: get_issue
+
+Tool #8: get_issue
+도구로 조회한 공정률은 30개 층·공종 전부 기준일이 2026-10-26입니다. 이 중 gap(planned_pct − actual_pct)이 10%p 이상인 곳은 **6곳**입니다.
+
+## 1. 층·공종별 계획/실적 공정률 (%)
+
+| 층 | 공종 | planned_pct | actual_pct | gap(%p) |
+|---|---|---|---|---|
+| B1 | structural | 100 | 100 | 0 |
+| B1 | plumbing | 95 | 90 | 5 |
+| B1 | electrical | 90 | 85 | 5 |
+| B1 | finishing | 60 | 55 | 5 |
+| B1 | fire_protection | 80 | 78 | 2 |
+| 1F | structural | 100 | 100 | 0 |
+| 1F | plumbing | 85 | 80 | 5 |
+| 1F | electrical | 80 | 66 | 14 |
+| 1F | finishing | 50 | 45 | 5 |
+| 1F | fire_protection | 70 | 52 | 18 |
+| 2F | structural | 100 | 98 | 2 |
+| 2F | plumbing | 75 | 70 | 5 |
+| 2F | electrical | 70 | 61 | 9 |
+| 2F | finishing | 40 | 38 | 2 |
+| 2F | fire_protection | 60 | 57 | 3 |
+| 3F | structural | 95 | 90 | 5 |
+| 3F | plumbing | 60 | 48 | 12 |
+| 3F | electrical | 55 | 40 | 15 |
+| 3F | finishing | 25 | 22 | 3 |
+| 3F | fire_protection | 45 | 40 | 5 |
+| 4F | structural | 80 | 66 | 14 |
+| 4F | plumbing | 40 | 35 | 5 |
+| 4F | electrical | 35 | 30 | 5 |
+| 4F | finishing | 10 | 10 | 0 |
+| 4F | fire_protection | 25 | 15 | 10 |
+| RF | structural | 60 | 55 | 5 |
+| RF | plumbing | 20 | 18 | 2 |
+| RF | electrical | 15 | 14 | 1 |
+| RF | finishing | 0 | 0 | 0 |
+| RF | fire_protection | 10 | 9 | 1 |
+
+## 2. gap ≥ 10%p인 층·공종 (gap 큰 순서)
+
+| 순위 | 층 | 공종 | planned | actual | gap(%p) |
+|---|---|---|---|---|---|
+| 1 | 1F | fire_protection | 70 | 52 | **18** |
+| 2 | 3F | electrical | 55 | 40 | **15** |
+| 3 | 1F | electrical | 80 | 66 | **14** |
+| 3 | 4F | structural | 80 | 66 | **14** |
+| 5 | 3F | plumbing | 60 | 48 | **12** |
+| 6 | 4F | fire_protection | 25 | 15 | **10** |
+
+**참고**
+- 2F electrical은 gap이 9%p라 조건(≥10)에서 빠졌지만, 기준에 가장 가깝습니다.
+- 4F fire_protection은 gap이 딱 10%p라 기준선에 걸쳐 포함됐습니다.
+- electrical은 1F·3F 두 층에서 조건에 해당하고, 2F도 9%p로 기준에 가깝습니다.
+- fire_protection은 1F·4F 두 층에서 조건에 해당합니다.The dates I'm seeing range from October 4 to October 23, 2026, but there's no clear indication of what "this week" means without knowing the current date. I'll report the full aggregation across all these dates instead, and flag that the tool doesn't support date filtering natively, so I should ask for a specific date range if a "this week" filter is actually needed.
+
+미해결(open + in_progress) 이슈 중 critical은 **6건**이고, 4개 층에 있습니다. 다만 아래 결과는 "이번 주"로 기간을 좁힌 게 아니라 **전체 기간** 기준입니다. 오늘 날짜를 모르고 검색 도구에 날짜 조건도 없어서 이번 주를 정할 수 없었습니다. 대신 각 이슈의 생성일을 함께 적었습니다.
+
+## 층별 critical 미해결 이슈 집계
+
+| 층 | 건수 | 이슈 ID | 상태 | 생성일 | 제목 |
+|---|---|---|---|---|---|
+| 1F | 1 | ISS-004 | open | 2026-10-04 | 1층 방화셔터 작동 불량 |
+| 2F | 1 | ISS-010 | open | 2026-10-09 | 2층 B구역 콘센트 회로 누전 |
+| 3F | 3 | ISS-014 | in_progress | 2026-10-14 | 3층 A구역 케이블 트레이 접지 누락 |
+| | | ISS-019 | open | 2026-10-16 | 3층 C구역 급수 본관 누수 |
+| | | ISS-021 | open | 2026-10-20 | 3층 B구역 분전반 결선 오류 |
+| 4F | 1 | ISS-026 | in_progress | 2026-10-23 | 4층 보 철근 간격 불량 |
+
+- **합계:** 6건 (open 4건, in_progress 2건)
+- **0건이라 뺀 층:** B1, RF
+
+## 참고
+- **"이번 주" 조건:** 생성일이 2026-10-04부터 10-23까지 약 3주에 걸쳐 있어서 어느 이슈가 이번 주에 해당하는지 정할 수 없었습니다. 이번 주 기간(예: 2026-10-19~10-25)을 알려주시면 바로 다시 집계하겠습니다.
+- **담당자 없음:** ISS-004, ISS-010, ISS-021 세 건은 담당자가 정해져 있지 않습니다. ISS-004는 생성된 지 가장 오래된 방화셔터 문제여서 먼저 확인해 보시는 게 좋겠습니다.Tallying by floor, 3F has the highest count, so that's the focus. Since the request's "미해결" means currently unresolved, I'll use the full unresolved count as of the report date rather than restricting to this week.
+
+
+Tool #3: WeeklyReport

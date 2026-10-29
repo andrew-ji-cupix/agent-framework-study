@@ -1,0 +1,36 @@
+[
+ {
+  "scenario": "approve",
+  "args": [
+   "start"
+  ],
+  "returncode": 0,
+  "assignments": []
+ },
+ {
+  "scenario": "approve",
+  "args": [
+   "resume",
+   "approve"
+  ],
+  "returncode": 1,
+  "assignments": []
+ },
+ {
+  "scenario": "reject",
+  "args": [
+   "start"
+  ],
+  "returncode": 0,
+  "assignments": []
+ },
+ {
+  "scenario": "reject",
+  "args": [
+   "resume",
+   "reject"
+  ],
+  "returncode": 1,
+  "assignments": []
+ }
+]

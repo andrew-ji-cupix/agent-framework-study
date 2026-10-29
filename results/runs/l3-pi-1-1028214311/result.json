@@ -1,0 +1,30 @@
+{
+ "run_id": "l3-pi-1-1028214311",
+ "batch": "final",
+ "task": "l3",
+ "candidate": "pi",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 12.37,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 3,
+ "llm_calls": 3,
+ "input_tokens": 13037,
+ "output_tokens": 840,
+ "cache_read": 9639,
+ "cache_write": 3390,
+ "reasoning_tokens": 0,
+ "cost": 0.03571,
+ "first_input_tokens": 3324,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

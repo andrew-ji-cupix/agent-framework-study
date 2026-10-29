@@ -1,0 +1,36 @@
+{
+ "run_id": "l5-pi-1-1028212208",
+ "batch": "dev",
+ "task": "l5",
+ "candidate": "pi",
+ "rep": 1,
+ "returncode": [
+  0,
+  0
+ ],
+ "wall_secs": 34.64,
+ "success": true,
+ "checks": {
+  "remember_step_answered": true,
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "review_line_before_last": true
+ },
+ "agents": 8,
+ "llm_calls": 8,
+ "input_tokens": 32165,
+ "output_tokens": 2293,
+ "cache_read": 22983,
+ "cache_write": 9160,
+ "reasoning_tokens": 0,
+ "cost": 0.096345,
+ "first_input_tokens": 3515,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

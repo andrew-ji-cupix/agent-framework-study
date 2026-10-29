@@ -1,0 +1,30 @@
+{
+ "run_id": "l3-crewai-1-1028214122",
+ "batch": "final",
+ "task": "l3",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 14.95,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 1,
+ "llm_calls": 3,
+ "input_tokens": 7394,
+ "output_tokens": 922,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 76,
+ "cost": 0.048016,
+ "first_input_tokens": 1366,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

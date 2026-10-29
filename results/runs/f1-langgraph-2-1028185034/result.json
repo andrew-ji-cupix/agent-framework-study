@@ -1,0 +1,46 @@
+{
+ "run_id": "f1-langgraph-2-1028185034",
+ "batch": "retry",
+ "task": "f1",
+ "candidate": "langgraph",
+ "rep": 2,
+ "returncode": 0,
+ "wall_secs": 12.19,
+ "success": true,
+ "fields": {
+  "open_count": true,
+  "critical_ids": true,
+  "top_priority_issue_id": true,
+  "recommended_assignee": true
+ },
+ "got": {
+  "open_count": 4,
+  "critical_ids": [
+   "ISS-014",
+   "ISS-021"
+  ],
+  "top_priority_issue_id": "ISS-014",
+  "recommended_assignee": "이서연"
+ },
+ "expected": {
+  "open_count": 4,
+  "critical_ids": [
+   "ISS-014",
+   "ISS-021"
+  ],
+  "top_priority_issue_id": "ISS-014",
+  "recommended_assignee": "이서연"
+ },
+ "llm_calls": 3,
+ "input_tokens": 7743,
+ "output_tokens": 680,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 0,
+ "cost": 0.044572,
+ "first_input_tokens": 1971,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

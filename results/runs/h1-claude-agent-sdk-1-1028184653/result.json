@@ -1,0 +1,24 @@
+{
+ "run_id": "h1-claude-agent-sdk-1-1028184653",
+ "batch": "final",
+ "task": "h1",
+ "candidate": "claude-agent-sdk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 23.55,
+ "success": true,
+ "tests_unchanged": true,
+ "pytest": "11 passed in 0.01s",
+ "llm_calls": 4,
+ "input_tokens": 78345,
+ "output_tokens": 1658,
+ "cache_read": 77006,
+ "cache_write": 1331,
+ "reasoning_tokens": 0,
+ "cost": 0.055248,
+ "first_input_tokens": 17292,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

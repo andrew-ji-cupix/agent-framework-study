@@ -1,0 +1,140 @@
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 98, in map_httpcore_exceptions
+    yield
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 245, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection_pool.py", line 242, in handle_request
+    raise exc from None
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection_pool.py", line 224, in handle_request
+    response = connection.handle_request(pool_request.request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection.py", line 94, in handle_request
+    raise exc
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection.py", line 74, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpcore2/_sync/connection.py", line 117, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpcore2/_backends/sync.py", line 203, in connect_tcp
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpcore2/_exceptions.py", line 17, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore2.ConnectError: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1188, in request
+    response = self._send_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_client.py", line 211, in _send_request
+    return sync_send_request(self, request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/lib/_client_auth.py", line 287, in sync_send_request
+    response = self._send_with_auth_retry(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_client.py", line 197, in _send_with_auth_retry
+    return sync_send_with_auth_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/lib/_client_auth.py", line 272, in sync_send_with_auth_retry
+    response = super(_owner, self)._send_request(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1109, in _send_request
+    return self._client.send(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 979, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1007, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1042, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_client.py", line 1075, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 244, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/httpx2/_transports/default.py", line 115, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx2.ConnectError: [Errno 61] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1992, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1395, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1480, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1223, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/l2.py", line 16, in <module>
+    result = agent.invoke({"messages": [{"role": "user", "content": prompt("l2")}]})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 4001, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3058, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 204, in tick
+    run_with_retry(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1536, in model_node
+    model_response = _execute_model_sync(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 6018, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1997, in _generate
+    _handle_openai_api_error(e)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/langgraph/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 744, in _handle_openai_api_error
+    raise OpenAIConnectionError(message=e.message, request=e.request) from e
+langchain_openai.chat_models.base.OpenAIConnectionError: Connection error.
+During task with name 'model' and id 'bd21fa79-bfba-9979-f267-58f94db6100e'

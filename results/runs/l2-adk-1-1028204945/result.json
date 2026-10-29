@@ -1,0 +1,28 @@
+{
+ "run_id": "l2-adk-1-1028204945",
+ "batch": "dev",
+ "task": "l2",
+ "candidate": "adk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 11.58,
+ "llm_calls": 3,
+ "input_tokens": 5328,
+ "output_tokens": 578,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 66,
+ "cost": 0.032872,
+ "first_input_tokens": 1156,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\ncritical 이슈가 두 건이라 생성일이 더 이른 ISS-014(2026-10-14)를 골랐습니다. 다른 한 건은 ISS-021(2026-10-20)입니다. ISS-014는 이미 박지훈 님이 맡아 진행 중입니다. 이서연 님은 전기 작업자 중 현재 배정 건수가 1건으로 가장 적어서 추천했습니다.",
+ "regraded": true
+}

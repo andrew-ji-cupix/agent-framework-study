@@ -1,0 +1,36 @@
+{
+ "run_id": "l5-deepagents-1-1028215402",
+ "batch": "final",
+ "task": "l5",
+ "candidate": "deepagents",
+ "rep": 1,
+ "returncode": [
+  0,
+  0
+ ],
+ "wall_secs": 48.74,
+ "success": true,
+ "checks": {
+  "remember_step_answered": true,
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "review_line_before_last": true
+ },
+ "agents": 3,
+ "llm_calls": 10,
+ "input_tokens": 73658,
+ "output_tokens": 3446,
+ "cache_read": 56231,
+ "cache_write": 17401,
+ "reasoning_tokens": 0,
+ "cost": 0.167275,
+ "first_input_tokens": 6921,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

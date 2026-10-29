@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-pi-1-1028214744",
+ "batch": "final",
+ "task": "l4",
+ "candidate": "pi",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 25.28,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 5,
+ "llm_calls": 5,
+ "input_tokens": 20794,
+ "output_tokens": 2010,
+ "cache_read": 13835,
+ "cache_write": 6945,
+ "reasoning_tokens": 0,
+ "cost": 0.077748,
+ "first_input_tokens": 3468,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

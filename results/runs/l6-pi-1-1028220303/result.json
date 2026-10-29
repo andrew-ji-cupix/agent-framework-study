@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-pi-1-1028220303",
+ "batch": "final",
+ "task": "l6",
+ "candidate": "pi",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 34.55,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 8,
+ "llm_calls": 8,
+ "input_tokens": 34022,
+ "output_tokens": 1540,
+ "cache_read": 23436,
+ "cache_write": 10564,
+ "reasoning_tokens": 0,
+ "cost": 0.088395,
+ "first_input_tokens": 3562,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

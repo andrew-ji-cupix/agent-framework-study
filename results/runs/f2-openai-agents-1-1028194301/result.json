@@ -1,0 +1,81 @@
+{
+ "run_id": "f2-openai-agents-1-1028194301",
+ "batch": "dev",
+ "task": "f2",
+ "candidate": "openai-agents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 30.51,
+ "llm_calls": 7,
+ "input_tokens": 16924,
+ "output_tokens": 3116,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 469,
+ "cost": 0.130016,
+ "first_input_tokens": 2063,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "fields": {
+  "delayed_trades": true,
+  "critical_by_level": true,
+  "focus_level": true
+ },
+ "got": {
+  "delayed_trades": [
+   [
+    [
+     "1F",
+     "electrical"
+    ],
+    14
+   ],
+   [
+    [
+     "1F",
+     "fire_protection"
+    ],
+    18
+   ],
+   [
+    [
+     "3F",
+     "electrical"
+    ],
+    15
+   ],
+   [
+    [
+     "3F",
+     "plumbing"
+    ],
+    12
+   ],
+   [
+    [
+     "4F",
+     "fire_protection"
+    ],
+    10
+   ],
+   [
+    [
+     "4F",
+     "structural"
+    ],
+    14
+   ]
+  ],
+  "critical_by_level": {
+   "3F": 3,
+   "1F": 1,
+   "2F": 1,
+   "4F": 1
+  },
+  "focus_level": "3F"
+ },
+ "regraded": true
+}

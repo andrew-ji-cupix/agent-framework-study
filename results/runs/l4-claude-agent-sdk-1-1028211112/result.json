@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-claude-agent-sdk-1-1028211112",
+ "batch": "dev",
+ "task": "l4",
+ "candidate": "claude-agent-sdk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 22.57,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 8,
+ "llm_calls": 8,
+ "input_tokens": 121249,
+ "output_tokens": 2307,
+ "cache_read": 115262,
+ "cache_write": 5969,
+ "reasoning_tokens": 0,
+ "cost": 0.099109,
+ "first_input_tokens": 17429,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

@@ -1,0 +1,27 @@
+{
+ "run_id": "l2-deepagents-1-1028214037",
+ "batch": "final",
+ "task": "l2",
+ "candidate": "deepagents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 11.83,
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n- **최우선 이슈:** 3층 전기 공종의 미해결 이슈는 4건입니다. 이 중 심각도가 critical인 이슈는 ISS-014와 ISS-021입니다. 생성일은 ISS-014가 2026-10-14로 ISS-021의 2026-10-20보다 이릅니다.\n- **추천 담당자:** 이서연의 현재 배정 건수가 1건으로 가장 적습니다",
+ "llm_calls": 3,
+ "input_tokens": 15726,
+ "output_tokens": 700,
+ "cache_read": 9963,
+ "cache_write": 5755,
+ "reasoning_tokens": 0,
+ "cost": 0.0448,
+ "first_input_tokens": 4632,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

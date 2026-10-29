@@ -1,0 +1,727 @@
+{
+  "$schemaVersion": "1.21",
+  "current_turn": 3,
+  "current_agent": {
+    "name": "assigner"
+  },
+  "original_input": "\uc774\uc288 ISS-021\uc5d0 \ub2f4\ub2f9\uc790\ub97c \ubc30\uc815\ud558\uc138\uc694.\n- \ub2f4\ub2f9\uc790\ub294 \uc774\uc288 \uacf5\uc885\uc758 \uc791\uc5c5\uc790 \uc911 \ud604\uc7ac \ubc30\uc815 \uac74\uc218(open_assignments)\uac00 \uac00\uc7a5 \uc801\uc740 \uc0ac\ub78c\uc785\ub2c8\ub2e4.\n- \ubc30\uc815\uc740 assign_issue \ub3c4\uad6c\ub85c \ud558\uc138\uc694.\n- \ub05d\ub098\uba74 \uacb0\uacfc\ub97c \ud55c \ubb38\uc7a5\uc73c\ub85c \uc54c\ub824 \uc8fc\uc138\uc694.\n",
+  "pending_input": [],
+  "model_responses": [
+    {
+      "usage": {
+        "requests": 1,
+        "input_tokens": 990,
+        "input_tokens_details": [
+          {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          }
+        ],
+        "output_tokens": 55,
+        "output_tokens_details": [
+          {
+            "reasoning_tokens": 0
+          }
+        ],
+        "total_tokens": 1045,
+        "request_usage_entries": []
+      },
+      "output": [
+        {
+          "arguments": "{\"issue_id\": \"ISS-021\"}",
+          "call_id": "toolu_01R1haLsQrrbnNVAvQSrmm8y",
+          "name": "get_issue",
+          "type": "function_call",
+          "id": "__fake_id__",
+          "provider_data": {
+            "model": "anthropic/claude-opus-5.5",
+            "response_id": "gen-1793184775-q9HttuUZn3Xjk5us5t0S"
+          }
+        }
+      ],
+      "response_id": null,
+      "request_id": null
+    },
+    {
+      "usage": {
+        "requests": 1,
+        "input_tokens": 1183,
+        "input_tokens_details": [
+          {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          }
+        ],
+        "output_tokens": 51,
+        "output_tokens_details": [
+          {
+            "reasoning_tokens": 0
+          }
+        ],
+        "total_tokens": 1234,
+        "request_usage_entries": []
+      },
+      "output": [
+        {
+          "arguments": "{\"trade\": \"electrical\"}",
+          "call_id": "toolu_016DKSKusE7EoqrWQUApxJrL",
+          "name": "list_crew",
+          "type": "function_call",
+          "id": "__fake_id__",
+          "provider_data": {
+            "model": "anthropic/claude-opus-5.5",
+            "response_id": "gen-1793184777-n6kWvhJ7Av1lwfazDz6i"
+          }
+        }
+      ],
+      "response_id": null,
+      "request_id": null
+    },
+    {
+      "usage": {
+        "requests": 1,
+        "input_tokens": 1369,
+        "input_tokens_details": [
+          {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          }
+        ],
+        "output_tokens": 81,
+        "output_tokens_details": [
+          {
+            "reasoning_tokens": 0
+          }
+        ],
+        "total_tokens": 1450,
+        "request_usage_entries": []
+      },
+      "output": [
+        {
+          "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+          "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+          "name": "assign_issue",
+          "type": "function_call",
+          "id": "__fake_id__",
+          "provider_data": {
+            "model": "anthropic/claude-opus-5.5",
+            "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+          }
+        }
+      ],
+      "response_id": null,
+      "request_id": null
+    }
+  ],
+  "context": {
+    "usage": {
+      "requests": 3,
+      "input_tokens": 3542,
+      "input_tokens_details": [
+        {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        }
+      ],
+      "output_tokens": 187,
+      "output_tokens_details": [
+        {
+          "reasoning_tokens": 0
+        }
+      ],
+      "total_tokens": 3729,
+      "request_usage_entries": [
+        {
+          "input_tokens": 990,
+          "output_tokens": 55,
+          "total_tokens": 1045,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "input_tokens": 1183,
+          "output_tokens": 51,
+          "total_tokens": 1234,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "input_tokens": 1369,
+          "output_tokens": 81,
+          "total_tokens": 1450,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      ]
+    },
+    "approvals": {},
+    "tool_invocations": {
+      "toolu_01R1haLsQrrbnNVAvQSrmm8y": {
+        "type": "function_call",
+        "approval_scope": "1a87de54beb96476933630598148ddb6bb726876dff2db0a6ab0e397b2fba33d",
+        "fingerprint": "7a68203459e254f4d2930e5167587a239d84a567dc7b17309d49e58cd318ac41",
+        "executed": true,
+        "completed": true
+      },
+      "toolu_016DKSKusE7EoqrWQUApxJrL": {
+        "type": "function_call",
+        "approval_scope": "8a8d800ee840343188f9985b9ea163cf5bd817421ebdf23a8a36d61df6f6eba8",
+        "fingerprint": "9818f33e3156d19080abb6815d5ec77c282414d2c320a32394d4d6fbc569026a",
+        "executed": true,
+        "completed": true
+      },
+      "toolu_01Cg7UUBCSeuuJcESyR4U7NL": {
+        "type": "function_call",
+        "approval_scope": "940559dd3140e30868c8ea369e1a04ab2f4ba1820cf975090c6621ee5ec998a7",
+        "fingerprint": "45d87c4ecfced6a4558966b0513d67999fa7f3c3a268516e803912f67849cfb9",
+        "executed": false,
+        "completed": false
+      }
+    },
+    "context": null,
+    "context_meta": {
+      "original_type": "none",
+      "serialized_via": "none",
+      "requires_deserializer": false,
+      "omitted": false
+    }
+  },
+  "tool_use_tracker": {
+    "assigner": [
+      "get_issue",
+      "list_crew",
+      "assign_issue"
+    ]
+  },
+  "max_turns": 10,
+  "no_active_agent_run": true,
+  "input_guardrail_results": [],
+  "output_guardrail_results": [],
+  "tool_input_guardrail_results": [],
+  "tool_output_guardrail_results": [],
+  "conversation_id": null,
+  "previous_response_id": null,
+  "auto_previous_response_id": false,
+  "generated_prompt_cache_key": null,
+  "reasoning_item_id_policy": null,
+  "nested_history_owned_session_item_refs": [],
+  "generated_session_item_indexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "current_response_generated_item_ownership": {
+    "start": 4,
+    "end": 6,
+    "interruptions": [
+      5
+    ]
+  },
+  "generated_items": [
+    {
+      "type": "tool_call_item",
+      "raw_item": {
+        "arguments": "{\"issue_id\": \"ISS-021\"}",
+        "call_id": "toolu_01R1haLsQrrbnNVAvQSrmm8y",
+        "name": "get_issue",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184775-q9HttuUZn3Xjk5us5t0S"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "get_issue",
+      "description": "\uc774\uc288 ID\ub85c \uc0c1\uc138 \uc815\ubcf4(\uad6c\uc5ed, \uc0dd\uc131\uc77c created_at, \ub2f4\ub2f9\uc790, \uc124\uba85)\ub97c \uc870\ud68c\ud55c\ub2e4.",
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_output_item",
+      "raw_item": {
+        "call_id": "toolu_01R1haLsQrrbnNVAvQSrmm8y",
+        "output": "{'id': 'ISS-021', 'title': '3\uce35 B\uad6c\uc5ed \ubd84\uc804\ubc18 \uacb0\uc120 \uc624\ub958', 'level': '3F', 'zone': 'B', 'trade': 'electrical', 'status': 'open', 'severity': 'critical', 'created_at': '2026-10-20', 'assignee': None, 'description': 'B\uad6c\uc5ed \ubd84\uc804\ubc18\uc758 \uc0c1 \uacb0\uc120\uc774 \ub3c4\uba74\uacfc \ub2e4\ub974\ub2e4.'}",
+        "type": "function_call_output"
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "output": {
+        "id": "ISS-021",
+        "title": "3\uce35 B\uad6c\uc5ed \ubd84\uc804\ubc18 \uacb0\uc120 \uc624\ub958",
+        "level": "3F",
+        "zone": "B",
+        "trade": "electrical",
+        "status": "open",
+        "severity": "critical",
+        "created_at": "2026-10-20",
+        "assignee": null,
+        "description": "B\uad6c\uc5ed \ubd84\uc804\ubc18\uc758 \uc0c1 \uacb0\uc120\uc774 \ub3c4\uba74\uacfc \ub2e4\ub974\ub2e4."
+      },
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_item",
+      "raw_item": {
+        "arguments": "{\"trade\": \"electrical\"}",
+        "call_id": "toolu_016DKSKusE7EoqrWQUApxJrL",
+        "name": "list_crew",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184777-n6kWvhJ7Av1lwfazDz6i"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "list_crew",
+      "description": "\uacf5\uc885\ubcc4 \uc791\uc5c5\uc790\uc640 \uac01 \uc791\uc5c5\uc790\uc758 \ud604\uc7ac \ubc30\uc815 \uac74\uc218(open_assignments)\ub97c \ubc18\ud658\ud55c\ub2e4.",
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_output_item",
+      "raw_item": {
+        "call_id": "toolu_016DKSKusE7EoqrWQUApxJrL",
+        "output": "[{'name': '\uae40\ubbfc\uc218', 'trade': 'electrical', 'open_assignments': 3}, {'name': '\ubc15\uc9c0\ud6c8', 'trade': 'electrical', 'open_assignments': 2}, {'name': '\uc774\uc11c\uc5f0', 'trade': 'electrical', 'open_assignments': 1}, {'name': '\ucd5c\uc720\uc9c4', 'trade': 'electrical', 'open_assignments': 4}]",
+        "type": "function_call_output"
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "output": [
+        {
+          "name": "\uae40\ubbfc\uc218",
+          "trade": "electrical",
+          "open_assignments": 3
+        },
+        {
+          "name": "\ubc15\uc9c0\ud6c8",
+          "trade": "electrical",
+          "open_assignments": 2
+        },
+        {
+          "name": "\uc774\uc11c\uc5f0",
+          "trade": "electrical",
+          "open_assignments": 1
+        },
+        {
+          "name": "\ucd5c\uc720\uc9c4",
+          "trade": "electrical",
+          "open_assignments": 4
+        }
+      ],
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_item",
+      "raw_item": {
+        "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+        "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+        "name": "assign_issue",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "assign_issue",
+      "description": "\uc774\uc288\uc5d0 \ub2f4\ub2f9\uc790\ub97c \ubc30\uc815\ud55c\ub2e4. \ubc30\uc815 \uae30\ub85d\uc744 \uc2e4\uc81c\ub85c \ub0a8\uae30\ub294 \uc791\uc5c5\uc774\ub2e4.",
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_approval_item",
+      "raw_item": {
+        "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+        "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+        "name": "assign_issue",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "assign_issue",
+      "tool_lookup_key": {
+        "kind": "bare",
+        "name": "assign_issue"
+      },
+      "tool_origin": {
+        "type": "function"
+      }
+    }
+  ],
+  "session_items": [
+    {
+      "type": "tool_call_item",
+      "raw_item": {
+        "arguments": "{\"issue_id\": \"ISS-021\"}",
+        "call_id": "toolu_01R1haLsQrrbnNVAvQSrmm8y",
+        "name": "get_issue",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184775-q9HttuUZn3Xjk5us5t0S"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "get_issue",
+      "description": "\uc774\uc288 ID\ub85c \uc0c1\uc138 \uc815\ubcf4(\uad6c\uc5ed, \uc0dd\uc131\uc77c created_at, \ub2f4\ub2f9\uc790, \uc124\uba85)\ub97c \uc870\ud68c\ud55c\ub2e4.",
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_output_item",
+      "raw_item": {
+        "call_id": "toolu_01R1haLsQrrbnNVAvQSrmm8y",
+        "output": "{'id': 'ISS-021', 'title': '3\uce35 B\uad6c\uc5ed \ubd84\uc804\ubc18 \uacb0\uc120 \uc624\ub958', 'level': '3F', 'zone': 'B', 'trade': 'electrical', 'status': 'open', 'severity': 'critical', 'created_at': '2026-10-20', 'assignee': None, 'description': 'B\uad6c\uc5ed \ubd84\uc804\ubc18\uc758 \uc0c1 \uacb0\uc120\uc774 \ub3c4\uba74\uacfc \ub2e4\ub974\ub2e4.'}",
+        "type": "function_call_output"
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "output": {
+        "id": "ISS-021",
+        "title": "3\uce35 B\uad6c\uc5ed \ubd84\uc804\ubc18 \uacb0\uc120 \uc624\ub958",
+        "level": "3F",
+        "zone": "B",
+        "trade": "electrical",
+        "status": "open",
+        "severity": "critical",
+        "created_at": "2026-10-20",
+        "assignee": null,
+        "description": "B\uad6c\uc5ed \ubd84\uc804\ubc18\uc758 \uc0c1 \uacb0\uc120\uc774 \ub3c4\uba74\uacfc \ub2e4\ub974\ub2e4."
+      },
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_item",
+      "raw_item": {
+        "arguments": "{\"trade\": \"electrical\"}",
+        "call_id": "toolu_016DKSKusE7EoqrWQUApxJrL",
+        "name": "list_crew",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184777-n6kWvhJ7Av1lwfazDz6i"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "list_crew",
+      "description": "\uacf5\uc885\ubcc4 \uc791\uc5c5\uc790\uc640 \uac01 \uc791\uc5c5\uc790\uc758 \ud604\uc7ac \ubc30\uc815 \uac74\uc218(open_assignments)\ub97c \ubc18\ud658\ud55c\ub2e4.",
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_output_item",
+      "raw_item": {
+        "call_id": "toolu_016DKSKusE7EoqrWQUApxJrL",
+        "output": "[{'name': '\uae40\ubbfc\uc218', 'trade': 'electrical', 'open_assignments': 3}, {'name': '\ubc15\uc9c0\ud6c8', 'trade': 'electrical', 'open_assignments': 2}, {'name': '\uc774\uc11c\uc5f0', 'trade': 'electrical', 'open_assignments': 1}, {'name': '\ucd5c\uc720\uc9c4', 'trade': 'electrical', 'open_assignments': 4}]",
+        "type": "function_call_output"
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "output": [
+        {
+          "name": "\uae40\ubbfc\uc218",
+          "trade": "electrical",
+          "open_assignments": 3
+        },
+        {
+          "name": "\ubc15\uc9c0\ud6c8",
+          "trade": "electrical",
+          "open_assignments": 2
+        },
+        {
+          "name": "\uc774\uc11c\uc5f0",
+          "trade": "electrical",
+          "open_assignments": 1
+        },
+        {
+          "name": "\ucd5c\uc720\uc9c4",
+          "trade": "electrical",
+          "open_assignments": 4
+        }
+      ],
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_call_item",
+      "raw_item": {
+        "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+        "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+        "name": "assign_issue",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "assign_issue",
+      "description": "\uc774\uc288\uc5d0 \ub2f4\ub2f9\uc790\ub97c \ubc30\uc815\ud55c\ub2e4. \ubc30\uc815 \uae30\ub85d\uc744 \uc2e4\uc81c\ub85c \ub0a8\uae30\ub294 \uc791\uc5c5\uc774\ub2e4.",
+      "tool_origin": {
+        "type": "function"
+      }
+    },
+    {
+      "type": "tool_approval_item",
+      "raw_item": {
+        "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+        "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+        "name": "assign_issue",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+        }
+      },
+      "agent": {
+        "name": "assigner"
+      },
+      "tool_name": "assign_issue",
+      "tool_lookup_key": {
+        "kind": "bare",
+        "name": "assign_issue"
+      },
+      "tool_origin": {
+        "type": "function"
+      }
+    }
+  ],
+  "current_step": {
+    "type": "next_step_interruption",
+    "data": {
+      "interruptions": [
+        {
+          "type": "tool_approval_item",
+          "raw_item": {
+            "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+            "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+            "name": "assign_issue",
+            "type": "function_call",
+            "id": "__fake_id__",
+            "provider_data": {
+              "model": "anthropic/claude-opus-5.5",
+              "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+            }
+          },
+          "agent": {
+            "name": "assigner"
+          },
+          "tool_name": "assign_issue",
+          "tool_origin": {
+            "type": "function"
+          },
+          "tool_lookup_key": {
+            "kind": "bare",
+            "name": "assign_issue"
+          }
+        }
+      ],
+      "response_accepted": false,
+      "llm_end_hooks_started": true
+    }
+  },
+  "last_model_response": {
+    "usage": {
+      "requests": 1,
+      "input_tokens": 1369,
+      "input_tokens_details": [
+        {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        }
+      ],
+      "output_tokens": 81,
+      "output_tokens_details": [
+        {
+          "reasoning_tokens": 0
+        }
+      ],
+      "total_tokens": 1450,
+      "request_usage_entries": []
+    },
+    "output": [
+      {
+        "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+        "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+        "name": "assign_issue",
+        "type": "function_call",
+        "id": "__fake_id__",
+        "provider_data": {
+          "model": "anthropic/claude-opus-5.5",
+          "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+        }
+      }
+    ],
+    "response_id": null,
+    "request_id": null
+  },
+  "last_processed_response": {
+    "new_items": [
+      {
+        "type": "tool_call_item",
+        "raw_item": {
+          "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+          "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+          "name": "assign_issue",
+          "type": "function_call",
+          "id": "__fake_id__",
+          "provider_data": {
+            "model": "anthropic/claude-opus-5.5",
+            "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+          }
+        },
+        "agent": {
+          "name": "assigner"
+        },
+        "tool_name": "assign_issue",
+        "description": "\uc774\uc288\uc5d0 \ub2f4\ub2f9\uc790\ub97c \ubc30\uc815\ud55c\ub2e4. \ubc30\uc815 \uae30\ub85d\uc744 \uc2e4\uc81c\ub85c \ub0a8\uae30\ub294 \uc791\uc5c5\uc774\ub2e4.",
+        "tool_origin": {
+          "type": "function"
+        }
+      }
+    ],
+    "tools_used": [
+      "assign_issue"
+    ],
+    "functions": [
+      {
+        "tool_call": {
+          "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+          "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+          "name": "assign_issue",
+          "type": "function_call",
+          "id": "__fake_id__",
+          "provider_data": {
+            "model": "anthropic/claude-opus-5.5",
+            "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+          }
+        },
+        "tool": {
+          "name": "assign_issue",
+          "lookupKey": {
+            "kind": "bare",
+            "name": "assign_issue"
+          },
+          "description": "\uc774\uc288\uc5d0 \ub2f4\ub2f9\uc790\ub97c \ubc30\uc815\ud55c\ub2e4. \ubc30\uc815 \uae30\ub85d\uc744 \uc2e4\uc81c\ub85c \ub0a8\uae30\ub294 \uc791\uc5c5\uc774\ub2e4.",
+          "paramsJsonSchema": {
+            "properties": {
+              "issue_id": {
+                "description": "\uc774\uc288 ID. \uc608: ISS-021",
+                "title": "Issue Id",
+                "type": "string"
+              },
+              "assignee": {
+                "description": "\ubc30\uc815\ud560 \uc791\uc5c5\uc790 \uc774\ub984",
+                "title": "Assignee",
+                "type": "string"
+              }
+            },
+            "required": [
+              "issue_id",
+              "assignee"
+            ],
+            "title": "assign_issue_args",
+            "type": "object",
+            "additionalProperties": false
+          }
+        }
+      }
+    ],
+    "computer_actions": [],
+    "custom_tool_actions": [],
+    "local_shell_actions": [],
+    "shell_actions": [],
+    "apply_patch_actions": [],
+    "handoffs": [],
+    "mcp_approval_requests": [],
+    "interruptions": [
+      {
+        "type": "tool_approval_item",
+        "raw_item": {
+          "arguments": "{\"issue_id\": \"ISS-021\", \"assignee\": \"\uc774\uc11c\uc5f0\"}",
+          "call_id": "toolu_01Cg7UUBCSeuuJcESyR4U7NL",
+          "name": "assign_issue",
+          "type": "function_call",
+          "id": "__fake_id__",
+          "provider_data": {
+            "model": "anthropic/claude-opus-5.5",
+            "response_id": "gen-1793184779-2Ifjghdj7f7GKoLfdhme"
+          }
+        },
+        "agent": {
+          "name": "assigner"
+        },
+        "tool_name": "assign_issue",
+        "tool_origin": {
+          "type": "function"
+        },
+        "tool_lookup_key": {
+          "kind": "bare",
+          "name": "assign_issue"
+        }
+      }
+    ],
+    "mcp_tool_bindings": {}
+  },
+  "current_turn_persisted_item_count": 0,
+  "trace": null
+}

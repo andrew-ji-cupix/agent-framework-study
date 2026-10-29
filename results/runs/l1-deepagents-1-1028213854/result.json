@@ -1,0 +1,27 @@
+{
+ "run_id": "l1-deepagents-1-1028213854",
+ "batch": "final",
+ "task": "l1",
+ "candidate": "deepagents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 6.53,
+ "success": true,
+ "checks": {
+  "trade": true,
+  "severity": true
+ },
+ "answer": "공종=electrical, 심각도=critical",
+ "llm_calls": 1,
+ "input_tokens": 4115,
+ "output_tokens": 16,
+ "cache_read": 0,
+ "cache_write": 4111,
+ "reasoning_tokens": 0,
+ "cost": 0.020891,
+ "first_input_tokens": 4115,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

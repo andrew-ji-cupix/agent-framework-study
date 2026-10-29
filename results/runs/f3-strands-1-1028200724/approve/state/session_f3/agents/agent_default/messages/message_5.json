@@ -1,0 +1,35 @@
+{
+  "message": {
+    "role": "assistant",
+    "content": [
+      {
+        "toolUse": {
+          "toolUseId": "toolu_017jnhrD6q35A11wywtcF6yw",
+          "name": "assign_issue",
+          "input": {
+            "issue_id": "ISS-021",
+            "assignee": "이서연"
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "usage": {
+        "inputTokens": 1240,
+        "outputTokens": 81,
+        "totalTokens": 1321,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 0,
+        "timeToFirstByteMs": 2419
+      }
+    },
+    "tracking_id": "3dfe0fab-1e78-4a35-8582-5fd60878021e"
+  },
+  "message_id": 5,
+  "redact_message": null,
+  "created_at": "2026-10-28T11:07:31.880291+00:00",
+  "updated_at": "2026-10-28T11:07:31.880313+00:00"
+}

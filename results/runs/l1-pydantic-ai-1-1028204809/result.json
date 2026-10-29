@@ -1,0 +1,27 @@
+{
+ "run_id": "l1-pydantic-ai-1-1028204809",
+ "batch": "dev",
+ "task": "l1",
+ "candidate": "pydantic-ai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 3.59,
+ "success": true,
+ "checks": {
+  "trade": true,
+  "severity": true
+ },
+ "answer": "공종=electrical, 심각도=critical",
+ "llm_calls": 1,
+ "input_tokens": 261,
+ "output_tokens": 43,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 27,
+ "cost": 0.001904,
+ "first_input_tokens": 261,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

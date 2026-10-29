@@ -1,0 +1,23 @@
+{
+  "message": {
+    "role": "user",
+    "content": [
+      {
+        "toolResult": {
+          "toolUseId": "toolu_015Ph7w8G74MnMLF73V2BYND",
+          "status": "success",
+          "content": [
+            {
+              "text": "[{\"name\": \"김민수\", \"trade\": \"electrical\", \"open_assignments\": 3}, {\"name\": \"박지훈\", \"trade\": \"electrical\", \"open_assignments\": 2}, {\"name\": \"이서연\", \"trade\": \"electrical\", \"open_assignments\": 1}, {\"name\": \"최유진\", \"trade\": \"electrical\", \"open_assignments\": 4}]"
+            }
+          ]
+        }
+      }
+    ],
+    "tracking_id": "925ba083-4a6d-498b-a4b3-057b4c5236d5"
+  },
+  "message_id": 4,
+  "redact_message": null,
+  "created_at": "2026-10-28T10:51:59.602619+00:00",
+  "updated_at": "2026-10-28T10:51:59.602627+00:00"
+}

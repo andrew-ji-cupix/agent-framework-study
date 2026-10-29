@@ -1,0 +1,54 @@
+{
+ "delayed_trades": [
+  {
+   "level": "1F",
+   "trade": "electrical",
+   "gap": 14
+  },
+  {
+   "level": "1F",
+   "trade": "fire_protection",
+   "gap": 18
+  },
+  {
+   "level": "3F",
+   "trade": "plumbing",
+   "gap": 12
+  },
+  {
+   "level": "3F",
+   "trade": "electrical",
+   "gap": 15
+  },
+  {
+   "level": "4F",
+   "trade": "structural",
+   "gap": 14
+  },
+  {
+   "level": "4F",
+   "trade": "fire_protection",
+   "gap": 10
+  }
+ ],
+ "critical_by_level": [
+  {
+   "level": "1F",
+   "count": 1
+  },
+  {
+   "level": "2F",
+   "count": 1
+  },
+  {
+   "level": "3F",
+   "count": 3
+  },
+  {
+   "level": "4F",
+   "count": 1
+  }
+ ],
+ "focus_level": "3F",
+ "summary": "2026-10-26 기준으로 계획보다 10%p 이상 늦은 공종은 6건입니다. 1F, 3F, 4F에 각각 2건씩 있고, 가장 크게 늦은 곳은 1F 소방(fire_protection)으로 18%p입니다. 아직 해결되지 않은 critical 이슈도 모두 6건이며 3F가 3건으로 가장 많고 1F, 2F, 4F는 1건씩입니다. 3F는 지연 공종 2건과 미해결 critical 이슈 3건을 더해 5건으로 가장 많아 이번 주 중점 관리 층으로 정했고, 특히 급수 본관 누수(ISS-019), 분전반 결선 오류(ISS-021), 케이블 트레이 접지 누락(ISS-014)을 지연된 설비(plumbing)·전기(electrical) 공종과 함께 빨리 처리해야 합니다."
+}

@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-claude-agent-sdk-1-1028213247",
+ "batch": "dev",
+ "task": "l6",
+ "candidate": "claude-agent-sdk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 75.16,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 10,
+ "llm_calls": 10,
+ "input_tokens": 140949,
+ "output_tokens": 7316,
+ "cache_read": 93173,
+ "cache_write": 47756,
+ "reasoning_tokens": 0,
+ "cost": 0.403815,
+ "first_input_tokens": 17657,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

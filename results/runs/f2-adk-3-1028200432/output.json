@@ -1,0 +1,54 @@
+{
+ "delayed_trades": [
+  {
+   "level": "1F",
+   "trade": "fire_protection",
+   "gap": 18
+  },
+  {
+   "level": "3F",
+   "trade": "electrical",
+   "gap": 15
+  },
+  {
+   "level": "1F",
+   "trade": "electrical",
+   "gap": 14
+  },
+  {
+   "level": "4F",
+   "trade": "structural",
+   "gap": 14
+  },
+  {
+   "level": "3F",
+   "trade": "plumbing",
+   "gap": 12
+  },
+  {
+   "level": "4F",
+   "trade": "fire_protection",
+   "gap": 10
+  }
+ ],
+ "critical_by_level": [
+  {
+   "level": "1F",
+   "count": 1
+  },
+  {
+   "level": "2F",
+   "count": 1
+  },
+  {
+   "level": "3F",
+   "count": 3
+  },
+  {
+   "level": "4F",
+   "count": 1
+  }
+ ],
+ "focus_level": "3F",
+ "summary": "2026-10-26 기준으로 계획보다 10%p 이상 늦어진 공종은 6건입니다. 가장 늦은 곳은 1F 소방(18%p)이고, 그다음은 3F 전기(15%p)와 1F 전기·4F 구조(각 14%p)입니다. 아직 해결되지 않은 critical 이슈는 모두 6건(1F 1건, 2F 1건, 3F 3건, 4F 1건)입니다. 이 가운데 ISS-004, ISS-010, ISS-021은 open 상태인데 담당자도 정해지지 않았습니다. 3F는 지연 공종 2건과 critical 이슈 3건을 합쳐 5건으로 가장 많아 집중 관리가 필요합니다(1F·4F 3건, 2F 1건)."
+}

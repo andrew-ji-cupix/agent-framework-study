@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-mastra-1-1028213209",
+ "batch": "dev",
+ "task": "l6",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 38.29,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 3,
+ "llm_calls": 7,
+ "input_tokens": 20904,
+ "output_tokens": 2000,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 507,
+ "cost": 0.123616,
+ "first_input_tokens": 2332,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

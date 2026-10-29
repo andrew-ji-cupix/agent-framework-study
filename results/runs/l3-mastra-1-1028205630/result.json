@@ -1,0 +1,31 @@
+{
+ "run_id": "l3-mastra-1-1028205630",
+ "batch": "dev",
+ "task": "l3",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 10.23,
+ "llm_calls": 3,
+ "input_tokens": 9043,
+ "output_tokens": 749,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 14,
+ "cost": 0.051152,
+ "first_input_tokens": 2060,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": false,
+ "checks": {
+  "first_line": false,
+  "unresolved": false,
+  "top_priority": false,
+  "assignee": false,
+  "doc_number_last": false
+ },
+ "agents": 1,
+ "regraded": true
+}

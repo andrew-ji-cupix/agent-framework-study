@@ -1,0 +1,41 @@
+{
+ "run_id": "f3-adk-3-1028201250",
+ "batch": "final",
+ "task": "f3",
+ "candidate": "adk",
+ "rep": 3,
+ "returncode": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "wall_secs": 27.05,
+ "success": true,
+ "approve": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "reject": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "llm_calls": 8,
+ "input_tokens": 10116,
+ "output_tokens": 600,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 37,
+ "cost": 0.052464,
+ "first_input_tokens": 1015,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

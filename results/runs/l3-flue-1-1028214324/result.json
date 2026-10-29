@@ -1,0 +1,30 @@
+{
+ "run_id": "l3-flue-1-1028214324",
+ "batch": "final",
+ "task": "l3",
+ "candidate": "flue",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 11.84,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 3,
+ "llm_calls": 3,
+ "input_tokens": 8009,
+ "output_tokens": 817,
+ "cache_read": 4620,
+ "cache_write": 3381,
+ "reasoning_tokens": 0,
+ "cost": 0.034201,
+ "first_input_tokens": 1685,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

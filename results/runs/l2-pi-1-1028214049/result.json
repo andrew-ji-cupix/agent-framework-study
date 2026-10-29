@@ -1,0 +1,27 @@
+{
+ "run_id": "l2-pi-1-1028214049",
+ "batch": "final",
+ "task": "l2",
+ "candidate": "pi",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 11.1,
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n- **최우선 이슈:** 3층 전기 미해결 이슈는 4건입니다. 그중 심각도 critical은 ISS-014와 ISS-021 두 건입니다. ISS-014(A구역 케이블 트레이 접지 누락, 2026-10-14 생성)가 ISS-021(B구역 분전반 결선 오류, 2026-10-20 생성)보다 먼저 생성됐습니다.\n- **추천 ",
+ "llm_calls": 3,
+ "input_tokens": 11369,
+ "output_tokens": 687,
+ "cache_read": 8121,
+ "cache_write": 3240,
+ "reasoning_tokens": 0,
+ "cost": 0.031596,
+ "first_input_tokens": 3210,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

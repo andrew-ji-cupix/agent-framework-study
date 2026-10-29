@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-strands-1-1028215723",
+ "batch": "final",
+ "task": "l6",
+ "candidate": "strands",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 30.83,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 3,
+ "llm_calls": 8,
+ "input_tokens": 15575,
+ "output_tokens": 1547,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 474,
+ "cost": 0.09324,
+ "first_input_tokens": 1443,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

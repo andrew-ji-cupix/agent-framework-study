@@ -1,0 +1,30 @@
+{
+ "run_id": "l3-deepagents-1-1028214258",
+ "batch": "final",
+ "task": "l3",
+ "candidate": "deepagents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 13.09,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 1,
+ "llm_calls": 3,
+ "input_tokens": 18929,
+ "output_tokens": 858,
+ "cache_read": 16216,
+ "cache_write": 2705,
+ "reasoning_tokens": 0,
+ "cost": 0.03396,
+ "first_input_tokens": 5234,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

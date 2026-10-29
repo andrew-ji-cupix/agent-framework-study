@@ -1,0 +1,24 @@
+{
+ "run_id": "h1-deepagents-3-1028184935",
+ "batch": "final",
+ "task": "h1",
+ "candidate": "deepagents",
+ "rep": 3,
+ "returncode": 0,
+ "wall_secs": 17.02,
+ "success": true,
+ "tests_unchanged": true,
+ "pytest": "11 passed in 0.01s",
+ "llm_calls": 4,
+ "input_tokens": 25861,
+ "output_tokens": 1027,
+ "cache_read": 25486,
+ "cache_write": 365,
+ "reasoning_tokens": 0,
+ "cost": 0.027502,
+ "first_input_tokens": 4540,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

@@ -1,0 +1,34 @@
+(node:7) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ▗  flue run
+ ▚  agent     BugFixer
+ ▘  id        01M60YNGRXJAAWRXRM9KQGBRFR
+    db        node_modules/.cache/flue/run.db
+
+user
+  이 작업 폴더에는 건설 현장 데이터를 계산하는 Python 패키지 `sitekit`이 있습니다. `python -m pytest -q`로 테스트를 실행할 수 있습니다.
+  
+  실패하는 테스트가 모두 통과하도록 `sitekit/` 아래 소스 코드를 고치세요.
+  - `tests/` 아래 파일은 수정하지 마세요.
+  - 작업이 끝나면 무엇을 고쳤는지 짧게 요약하세요.
+
+tool bash
+tool done bash
+tool bash
+tool done bash
+tool bash
+tool done bash
+assistant
+  이제 테스트 11개가 모두 통과합니다. 실패하던 6개는 `sitekit/` 아래 파일 3개에서 생긴 문제였고, `tests/`는 건드리지 않았습니다.
+  
+  - **`sitekit/crew.py`**: `recommend`가 `max`를 써서 배정이 가장 많은 사람을 골랐습니다. `min`으로 바꿔 배정 건수가 가장 적은 사람을 고르고, 건수가 같으면 이름순으로 앞선 사람을 고르게 했습니다.
+  - **`sitekit/issues.py`**
+    - `unresolved`가 `open` 상태만 걸러서 `in_progress` 이슈가 빠졌습니다. 두 상태를 모두 포함하게 했습니다.
+    - `top_priority`가 심각도를 문자열 알파벳순으로 비교하고 있었습니다. `SEVERITY_RANK` 순위로 비교하도록 고쳤습니다.
+  - **`sitekit/progress.py`**
+    - `delayed`가 `>`로 비교해서 지연 폭이 기준값과 같은 행이 빠졌습니다. `>=`로 바꿔 포함되게 했습니다.
+    - 지연 폭이 작은 순으로 정렬되던 것을 큰 순서로 바꿨습니다(`reverse=True`).
+
+    id        01M60YNGRXJAAWRXRM9KQGBRFR
+    uid       inst_01M60YNGVSS91C40JB1K5KSTKZ
+done agent completed

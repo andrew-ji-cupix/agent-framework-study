@@ -1,0 +1,31 @@
+{
+ "run_id": "l3-langgraph-1-1028205500",
+ "batch": "dev",
+ "task": "l3",
+ "candidate": "langgraph",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 11.9,
+ "llm_calls": 3,
+ "input_tokens": 6609,
+ "output_tokens": 772,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 13,
+ "cost": 0.041876,
+ "first_input_tokens": 1161,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 1,
+ "regraded": true
+}

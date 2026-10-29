@@ -1,0 +1,41 @@
+{
+ "run_id": "f3-pydantic-ai-3-1028201336",
+ "batch": "final",
+ "task": "f3",
+ "candidate": "pydantic-ai",
+ "rep": 3,
+ "returncode": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "wall_secs": 18.37,
+ "success": true,
+ "approve": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "reject": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "llm_calls": 8,
+ "input_tokens": 9247,
+ "output_tokens": 603,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 21,
+ "cost": 0.049048,
+ "first_input_tokens": 919,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

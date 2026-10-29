@@ -1,0 +1,41 @@
+{
+ "run_id": "f3-openai-agents-2-1028201044",
+ "batch": "final",
+ "task": "f3",
+ "candidate": "openai-agents",
+ "rep": 2,
+ "returncode": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "wall_secs": 19.17,
+ "success": true,
+ "approve": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "reject": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "llm_calls": 8,
+ "input_tokens": 10071,
+ "output_tokens": 604,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 21,
+ "cost": 0.052364,
+ "first_input_tokens": 990,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

@@ -1,0 +1,54 @@
+{
+ "delayed_trades": [
+  {
+   "level": "1F",
+   "trade": "electrical",
+   "gap": 14
+  },
+  {
+   "level": "1F",
+   "trade": "fire_protection",
+   "gap": 18
+  },
+  {
+   "level": "3F",
+   "trade": "plumbing",
+   "gap": 12
+  },
+  {
+   "level": "3F",
+   "trade": "electrical",
+   "gap": 15
+  },
+  {
+   "level": "4F",
+   "trade": "structural",
+   "gap": 14
+  },
+  {
+   "level": "4F",
+   "trade": "fire_protection",
+   "gap": 10
+  }
+ ],
+ "critical_by_level": [
+  {
+   "level": "1F",
+   "count": 1
+  },
+  {
+   "level": "2F",
+   "count": 1
+  },
+  {
+   "level": "3F",
+   "count": 3
+  },
+  {
+   "level": "4F",
+   "count": 1
+  }
+ ],
+ "focus_level": "3F",
+ "summary": "2026-10-26 기준으로 계획보다 10%p 이상 늦어진 공종은 1F, 3F, 4F에 각 2개씩 모두 6개이며, 가장 많이 늦어진 것은 1F 소방(fire_protection)으로 18%p 차이가 납니다. 아직 해결되지 않은(open 또는 in_progress) critical 이슈는 1F, 2F, 4F에 각 1건, 3F에 3건으로 모두 6건입니다. 3F는 지연 공종 2개(설비·전기)와 미해결 critical 이슈 3건을 더해 5로 가장 높아 이번 주 집중 관리 층으로 정했습니다. 미해결 critical 이슈 중 ISS-004, ISS-010, ISS-021 세 건은 담당자가 정해지지 않아 바로 배정해야 합니다."
+}

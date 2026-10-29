@@ -1,0 +1,37 @@
+{
+ "run_id": "l5-crewai-1-1028214906",
+ "batch": "final",
+ "task": "l5",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": [
+  0,
+  0
+ ],
+ "wall_secs": 80.99,
+ "success": true,
+ "checks": {
+  "remember_step_answered": true,
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "review_line_before_last": true
+ },
+ "agents": 5,
+ "llm_calls": 45,
+ "input_tokens": 71928,
+ "output_tokens": 7679,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 311,
+ "cost": 0.434948,
+ "first_input_tokens": 77,
+ "api": [
+  "/api/v1/chat/completions",
+  "/api/v1/embeddings"
+ ],
+ "http_errors": []
+}

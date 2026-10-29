@@ -1,0 +1,30 @@
+{
+ "run_id": "l3-pydantic-ai-1-1028214216",
+ "batch": "final",
+ "task": "l3",
+ "candidate": "pydantic-ai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 14.84,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 1,
+ "llm_calls": 3,
+ "input_tokens": 6484,
+ "output_tokens": 927,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 28,
+ "cost": 0.044476,
+ "first_input_tokens": 1158,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

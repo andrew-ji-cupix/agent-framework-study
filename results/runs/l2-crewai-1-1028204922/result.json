@@ -1,0 +1,28 @@
+{
+ "run_id": "l2-crewai-1-1028204922",
+ "batch": "dev",
+ "task": "l2",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 11.77,
+ "llm_calls": 3,
+ "input_tokens": 5501,
+ "output_tokens": 786,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 250,
+ "cost": 0.037724,
+ "first_input_tokens": 1181,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n참고: 3층 전기 미해결 이슈 4건 중 critical은 ISS-014(10-14 생성)와 ISS-021(10-20 생성) 두 건이고, 더 먼저 생긴 ISS-014를 골랐습니다. 이서연은 현재 배정이 1건으로 가장 적습니다. 다만 ISS-014는 이미 진행 중이고 박지훈에게 배정되어 있으니 담당자를 바꿀지는 확인이 필",
+ "regraded": true
+}

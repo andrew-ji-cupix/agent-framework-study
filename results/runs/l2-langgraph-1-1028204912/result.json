@@ -1,0 +1,28 @@
+{
+ "run_id": "l2-langgraph-1-1028204912",
+ "batch": "dev",
+ "task": "l2",
+ "candidate": "langgraph",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 10.04,
+ "llm_calls": 3,
+ "input_tokens": 5042,
+ "output_tokens": 714,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 0,
+ "cost": 0.034448,
+ "first_input_tokens": 1064,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n- 3층 전기 공종의 미해결 이슈는 4건입니다. 진행 중 2건(ISS-014, ISS-024), 미착수 2건(ISS-017, ISS-021)입니다.\n- 심각도가 가장 높은(critical) 이슈는 ISS-014와 ISS-021입니다. 둘 중 ISS-014(A구역 케이블 트레이 접지 누락, 2026-10-14)가 ISS",
+ "regraded": true
+}

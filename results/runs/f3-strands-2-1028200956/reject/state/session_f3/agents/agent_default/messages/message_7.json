@@ -1,0 +1,35 @@
+{
+  "message": {
+    "role": "assistant",
+    "content": [
+      {
+        "reasoningContent": {
+          "reasoningText": {
+            "text": "That was rejected, so I should just state that plainly.\n\n"
+          }
+        }
+      },
+      {
+        "text": "현장 관리자가 거절해서 ISS-021(3층 B구역 분전반 결선 오류, 전기, 긴급)을 전기 작업자 중 현재 배정 건수가 1건으로 가장 적은 이서연에게 배정하지 못했고, 다시 시도하지 말라는 안내에 따라 미배정 상태로 작업을 마쳤습니다."
+      }
+    ],
+    "metadata": {
+      "usage": {
+        "inputTokens": 1369,
+        "outputTokens": 152,
+        "totalTokens": 1521,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 0,
+        "timeToFirstByteMs": 2934
+      }
+    },
+    "tracking_id": "b58c4d83-a7a1-428a-9ca2-f30a5f97ebf5"
+  },
+  "message_id": 7,
+  "redact_message": null,
+  "created_at": "2026-10-28T11:10:16.819824+00:00",
+  "updated_at": "2026-10-28T11:10:16.819903+00:00"
+}

@@ -1,0 +1,28 @@
+{
+ "run_id": "l2-flue-1-1028205102",
+ "batch": "dev",
+ "task": "l2",
+ "candidate": "flue",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 9.65,
+ "llm_calls": 3,
+ "input_tokens": 6320,
+ "output_tokens": 653,
+ "cache_read": 3716,
+ "cache_write": 2596,
+ "reasoning_tokens": 0,
+ "cost": 0.026815,
+ "first_input_tokens": 1527,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\nISS-014와 ISS-021은 둘 다 심각도가 critical이라 생성일이 더 이른 ISS-014(10/14)를 골랐습니다. ISS-021은 10/20에 생성됐습니다. ISS-014는 이미 박지훈(배정 2건)이 작업 중(in_progress)입니다. 이서연은 조건대로 배정 건수가 가장 적은 사람(1건)이라 추천했습니",
+ "regraded": true
+}

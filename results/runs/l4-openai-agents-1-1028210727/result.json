@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-openai-agents-1-1028210727",
+ "batch": "dev",
+ "task": "l4",
+ "candidate": "openai-agents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 27.32,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 2,
+ "llm_calls": 5,
+ "input_tokens": 10871,
+ "output_tokens": 2221,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 190,
+ "cost": 0.087904,
+ "first_input_tokens": 1442,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

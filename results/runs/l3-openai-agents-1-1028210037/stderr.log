@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/l3.py", line 23, in <module>
+    save(Runner.run_sync(agent, prompt("l3"), run_config=run_config).final_output)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run.py", line 455, in run_sync
+    return runner.run_sync(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run.py", line 2520, in run_sync
+    return self._run_sync_impl(starting_agent, input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run.py", line 2614, in _run_sync_impl
+    return default_loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run.py", line 610, in run
+    return await self._run_impl(starting_agent, input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run.py", line 1907, in _run_impl
+    turn_result = await model_task
+                  ^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run_internal/run_loop.py", line 980, in preserve_tool_task_cancellation
+    return await awaitable
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run_internal/run_loop.py", line 2864, in run_single_turn
+    new_response = await get_new_response(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run_internal/run_loop.py", line 3025, in get_new_response
+    new_response = await get_response_with_retry(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run_internal/model_retry.py", line 612, in get_response_with_retry
+    response = await _await_model_attempt(get_response(), timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/run_internal/model_retry.py", line 296, in _await_model_attempt
+    return await awaitable
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/models/openai_chatcompletions.py", line 249, in get_response
+    response = await self._fetch_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/models/openai_chatcompletions.py", line 645, in _fetch_response
+    converted_tools = [Converter.tool_to_openai(tool) for tool in tools] if tools else []
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/openai-agents/.venv/lib/python3.12/site-packages/agents/models/chatcmpl_converter.py", line 1034, in tool_to_openai
+    raise UserError(
+agents.exceptions.UserError: Hosted tools are not supported with the ChatCompletions API. Got tool type: <class 'agents.sandbox.capabilities.tools.apply_patch_tool.SandboxApplyPatchTool'>, tool: SandboxApplyPatchTool(name='apply_patch', description='Use the `apply_patch` tool to edit files. This is a FREEFORM tool, so do not wrap the patch in JSON.\nYour patch language is a stripped-down, file-oriented diff format designed to be easy to\nparse and safe to apply. You can think of it as a high-level envelope:\n\n*** Begin Patch\n[ one or more file sections ]\n*** End Patch\n\nWithin that envelope, you get a sequence of file operations.\nYou MUST include a header to specify the action you are taking.\nEach operation starts with one of three headers:\n\n*** Add File: <path> - create a new file. Every following line is a + line (the initial contents).\n*** Delete File: <path> - remove an existing file. Nothing follows.\n*** Update File: <path> - patch an existing file in place (optionally with a rename).\n\nMay be immediately followed by *** Move to: <new path> if you want to rename the file.\nThen one or more hunks, each introduced by @@ (optionally followed by a hunk header).\nWithin a hunk, each line starts with a space, -, or +.\n\nFor context lines:\n- By default, show 3 lines of code immediately above and 3 lines immediately below each\nchange. If a change is within 3 lines of a previous change, do NOT duplicate the first\nchange\'s post-context lines in the second change\'s pre-context lines.\n- If 3 lines of context is insufficient to uniquely identify the snippet of code within the\nfile, use the @@ operator to indicate the class or function to which the snippet belongs.\nFor instance:\n@@ class BaseClass\n[3 lines of pre-context]\n-[old_code]\n+[new_code]\n[3 lines of post-context]\n\n- If a code block is repeated so many times in a class or function that a single @@ statement\nand 3 lines of context cannot uniquely identify the snippet, use multiple @@ statements to\njump to the right context. For instance:\n\n@@ class BaseClass\n@@ def method():\n[3 lines of pre-context]\n-[old_code]\n+[new_code]\n[3 lines of post-context]\n\nThe full grammar definition is below:\nPatch := Begin { FileOp } End\nBegin := "*** Begin Patch" NEWLINE\nEnd := "*** End Patch" NEWLINE\nFileOp := AddFile | DeleteFile | UpdateFile\nAddFile := "*** Add File: " path NEWLINE { "+" line NEWLINE }\nDeleteFile := "*** Delete File: " path NEWLINE\nUpdateFile := "*** Update File: " path NEWLINE [ MoveTo ] Hunk { Hunk }\nMoveTo := "*** Move to: " newPath NEWLINE\nHunk := "@@" [ header ] NEWLINE { HunkLine } [ "*** End of File" NEWLINE ]\nHunkLine := (" " | "-" | "+") text NEWLINE\n\nA full patch can combine several operations:\n\n*** Begin Patch\n*** Add File: hello.txt\n+Hello world\n*** Update File: src/app.py\n*** Move to: src/main.py\n@@ def greet():\n-print("Hi")\n+print("Hello, world!")\n*** Delete File: obsolete.txt\n*** End Patch\n\nImportant:\n- You must include a header with your intended action (Add/Delete/Update).\n- You must prefix new lines with + even when creating a new file.\n- File references can only be relative, NEVER ABSOLUTE.', on_invoke_tool=<bound method SandboxApplyPatchTool._on_invoke_tool of ...>, format={'type': 'grammar', 'syntax': 'lark', 'definition': 'start: begin_patch hunk+ end_patch\nbegin_patch: "*** Begin Patch" LF\nend_patch: "*** End Patch" LF?\n\nhunk: add_hunk | delete_hunk | update_hunk\nadd_hunk: "*** Add File: " filename LF add_line+\ndelete_hunk: "*** Delete File: " filename LF\nupdate_hunk: "*** Update File: " filename LF change_move? change\n\nfilename: /(.+)/\nadd_line: "+" /(.*)/ LF -> line\n\nchange_move: "*** Move to: " filename LF\nchange: (change_context | change_line)+ eof_line?\nchange_context: ("@@" | "@@ " /(.+)/) LF\nchange_line: ("+" | "-" | " ") /(.*)/ LF\neof_line: "*** End of File" LF\n\n%import common.LF'}, needs_approval=False, on_approval=None, defer_loading=False, custom_data_extractor=None, allowed_callers=None)

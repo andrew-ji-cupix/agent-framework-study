@@ -1,0 +1,27 @@
+{
+ "run_id": "l1-flue-1-1028204830",
+ "batch": "dev",
+ "task": "l1",
+ "candidate": "flue",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 2.73,
+ "success": true,
+ "checks": {
+  "trade": true,
+  "severity": true
+ },
+ "answer": "공종=electrical, 심각도=critical",
+ "llm_calls": 1,
+ "input_tokens": 1054,
+ "output_tokens": 16,
+ "cache_read": 0,
+ "cache_write": 1050,
+ "reasoning_tokens": 0,
+ "cost": 0.005586,
+ "first_input_tokens": 1054,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

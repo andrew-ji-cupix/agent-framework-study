@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-langgraph-1-1028215600",
+ "batch": "final",
+ "task": "l6",
+ "candidate": "langgraph",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 52.33,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 3,
+ "llm_calls": 11,
+ "input_tokens": 23130,
+ "output_tokens": 3205,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 1044,
+ "cost": 0.15662,
+ "first_input_tokens": 1408,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

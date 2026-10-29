@@ -1,0 +1,54 @@
+{
+ "delayed_trades": [
+  {
+   "level": "1F",
+   "trade": "electrical",
+   "gap": 14
+  },
+  {
+   "level": "1F",
+   "trade": "fire_protection",
+   "gap": 18
+  },
+  {
+   "level": "3F",
+   "trade": "plumbing",
+   "gap": 12
+  },
+  {
+   "level": "3F",
+   "trade": "electrical",
+   "gap": 15
+  },
+  {
+   "level": "4F",
+   "trade": "structural",
+   "gap": 14
+  },
+  {
+   "level": "4F",
+   "trade": "fire_protection",
+   "gap": 10
+  }
+ ],
+ "critical_by_level": [
+  {
+   "level": "1F",
+   "count": 1
+  },
+  {
+   "level": "2F",
+   "count": 1
+  },
+  {
+   "level": "3F",
+   "count": 3
+  },
+  {
+   "level": "4F",
+   "count": 1
+  }
+ ],
+ "focus_level": "3F",
+ "summary": "2026-10-26 기준으로 계획보다 10%p 이상 늦은 공종은 1F, 3F, 4F에 2건씩 총 6건이며, 가장 크게 늦은 곳은 1F fire_protection(18%p)입니다. 아직 해결되지 않은 critical 이슈는 총 6건으로 3F 3건, 1F·2F·4F 각 1건입니다. 지연 공종과 미해결 critical 이슈를 더하면 3F가 5건으로 가장 많아 집중 관리 층으로 정했습니다. 3F에서는 plumbing(12%p)과 electrical(15%p)이 늦어지고 있고, 케이블 트레이 접지 누락, 급수 본관 누수, 분전반 결선 오류가 아직 해결되지 않았습니다."
+}

@@ -1,0 +1,27 @@
+{
+ "run_id": "l2-pydantic-ai-1-1028214004",
+ "batch": "final",
+ "task": "l2",
+ "candidate": "pydantic-ai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 10.34,
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\nISS-014는 이미 박지훈 님에게 배정되어 작업 중이라 참고로 알려드립니다. 심각도가 critical인 이슈는 ISS-014(10월 14일 생성)와 ISS-021(10월 20일 생성) 두 건이고, 생성일이 더 이른 ISS-014를 골랐습니다. 이서연 님은 지금 배정 건수가 1건으로 전기 작업자 중 가장 적습니다.",
+ "llm_calls": 3,
+ "input_tokens": 4944,
+ "output_tokens": 657,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 107,
+ "cost": 0.032916,
+ "first_input_tokens": 1060,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

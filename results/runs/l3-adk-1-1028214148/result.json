@@ -1,0 +1,30 @@
+{
+ "run_id": "l3-adk-1-1028214148",
+ "batch": "final",
+ "task": "l3",
+ "candidate": "adk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 16.05,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 1,
+ "llm_calls": 5,
+ "input_tokens": 14413,
+ "output_tokens": 823,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 15,
+ "cost": 0.074112,
+ "first_input_tokens": 1959,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

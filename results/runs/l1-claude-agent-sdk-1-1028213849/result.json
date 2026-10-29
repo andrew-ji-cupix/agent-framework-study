@@ -1,0 +1,27 @@
+{
+ "run_id": "l1-claude-agent-sdk-1-1028213849",
+ "batch": "final",
+ "task": "l1",
+ "candidate": "claude-agent-sdk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 4.62,
+ "success": true,
+ "checks": {
+  "trade": true,
+  "severity": true
+ },
+ "answer": "공종=electrical, 심각도=critical",
+ "llm_calls": 1,
+ "input_tokens": 17378,
+ "output_tokens": 16,
+ "cache_read": 10850,
+ "cache_write": 6526,
+ "reasoning_tokens": 0,
+ "cost": 0.035128,
+ "first_input_tokens": 17378,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

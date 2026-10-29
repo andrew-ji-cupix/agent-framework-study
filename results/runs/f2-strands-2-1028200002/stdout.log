@@ -1,0 +1,132 @@
+
+Tool #1: ask_progress_analyst
+
+Tool #2: ask_issue_analyst
+
+Tool #1: get_progress
+I notice search_issues lacks a severity filter, so I'll just search without any filters and check whether severity shows up in the summary.
+
+
+Tool #1: search_issues
+I'm calculating the gaps between floors and systems, looking for anything 10 or more — flagging 1F electrical at 14, 1F fire at 18, 3F plumbing at 12, 3F electrical at 15, 4F structural at 14, and 4F fire at 10 as the significant outliers.
+
+I'm counting 6 unresolved issues across floors: 1F has ISS-004, 2F has ISS-010, 3F has three (014, 019, 021), and 4F has 026. Since the titles only give summaries, I'll need to pull full descriptions via get_issue for details.
+
+
+Tool #2: get_issue
+
+Tool #3: get_issue
+
+Tool #4: get_issue
+
+Tool #5: get_issue
+
+Tool #6: get_issue
+
+Tool #7: get_issue
+
+Tool #8: get_issue
+
+Tool #9: get_issue
+계획보다 실적이 10%p 이상 뒤처진 항목은 **6개**입니다. 가장 큰 차이는 1F 소방 18%p이고, 그다음은 3F 전기 15%p입니다. 기준일 2026-10-26 데이터를 도구로 조회한 값만 사용했습니다.
+
+## 1. 10%p 이상 뒤처진 항목 (gap 큰 순)
+
+| 층 | 공종 | planned_pct | actual_pct | gap |
+|---|---|---|---|---|
+| 1F | fire_protection | 70 | 52 | **18** |
+| 3F | electrical | 55 | 40 | **15** |
+| 1F | electrical | 80 | 66 | **14** |
+| 4F | structural | 80 | 66 | **14** |
+| 3F | plumbing | 60 | 48 | **12** |
+| 4F | fire_protection | 25 | 15 | **10** |
+
+**참고:**
+- 4F fire_protection은 gap이 정확히 10이지만, 조건이 "≥ 10"이라서 포함했습니다.
+- 2F electrical은 gap이 9라서 바로 아래 값으로 빠졌습니다.
+- 층별로 보면 1F·3F·4F에 각각 2개씩 몰려 있습니다. B1·2F·RF에는 해당 항목이 없습니다.
+
+## 2. 전체 원본 데이터 (기준일 2026-10-26)
+
+| 층 | 공종 | planned_pct | actual_pct | gap |
+|---|---|---|---|---|
+| B1 | structural | 100 | 100 | 0 |
+| B1 | plumbing | 95 | 90 | 5 |
+| B1 | electrical | 90 | 85 | 5 |
+| B1 | finishing | 60 | 55 | 5 |
+| B1 | fire_protection | 80 | 78 | 2 |
+| 1F | structural | 100 | 100 | 0 |
+| 1F | plumbing | 85 | 80 | 5 |
+| 1F | electrical | 80 | 66 | 14 |
+| 1F | finishing | 50 | 45 | 5 |
+| 1F | fire_protection | 70 | 52 | 18 |
+| 2F | structural | 100 | 98 | 2 |
+| 2F | plumbing | 75 | 70 | 5 |
+| 2F | electrical | 70 | 61 | 9 |
+| 2F | finishing | 40 | 38 | 2 |
+| 2F | fire_protection | 60 | 57 | 3 |
+| 3F | structural | 95 | 90 | 5 |
+| 3F | plumbing | 60 | 48 | 12 |
+| 3F | electrical | 55 | 40 | 15 |
+| 3F | finishing | 25 | 22 | 3 |
+| 3F | fire_protection | 45 | 40 | 5 |
+| 4F | structural | 80 | 66 | 14 |
+| 4F | plumbing | 40 | 35 | 5 |
+| 4F | electrical | 35 | 30 | 5 |
+| 4F | finishing | 10 | 10 | 0 |
+| 4F | fire_protection | 25 | 15 | 10 |
+| RF | structural | 60 | 55 | 5 |
+| RF | plumbing | 20 | 18 | 2 |
+| RF | electrical | 15 | 14 | 1 |
+| RF | finishing | 0 | 0 | 0 |
+| RF | fire_protection | 10 | 9 | 1 |
+
+원본 데이터는 6개 층 × 5개 공종, 총 30개 항목입니다. 모든 항목의 기준일(as_of)은 2026-10-26입니다. gap 열은 원본에 없는 값으로, planned_pct − actual_pct로 직접 계산해 넣었습니다.I count 6 unresolved critical issues total: ISS-004 on 1F, ISS-010 on 2F, ISS-014, ISS-019, ISS-021 on 3F, and ISS-026 on 4F, with none on B1 or RF. Since search_issues lacks a severity filter, I ran a full unfiltered search to gather these.
+
+현장 이슈 30건을 모두 조회해 severity로 걸러 보니 critical 이슈는 8건이었습니다. 이 가운데 미해결(open 또는 in_progress)은 **6건**이고, 3F에 3건이 몰려 있습니다. 검색 도구에는 severity 조건이 없어서 조건 없이 전체를 가져온 뒤 직접 걸렀습니다. critical 8건은 모두 상세 조회로 다시 확인했습니다.
+
+## 1. 미해결 critical 이슈 층별 건수
+
+| 층 | 건수 |
+|---|---|
+| B1 | 0 |
+| 1F | 1 |
+| 2F | 1 |
+| 3F | **3** |
+| 4F | 1 |
+| RF | 0 |
+| **합계** | **6** |
+
+## 2. 미해결 critical 이슈 목록
+
+| ID | 층 | 구역 | 상태 | 공종 | 내용 | 담당자 | 생성일 |
+|---|---|---|---|---|---|---|---|
+| ISS-004 | 1F | C | open | fire_protection | 방화셔터 작동 불량: C구역 방화셔터가 연동 시험에서 내려오지 않음 | **없음** | 2026-10-04 |
+| ISS-010 | 2F | B | open | electrical | 콘센트 회로 누전: B구역 콘센트 회로의 절연저항 측정값이 기준에 못 미침 | **없음** | 2026-10-09 |
+| ISS-014 | 3F | A | in_progress | electrical | 케이블 트레이 접지 누락: A구역 케이블 트레이 12m 구간에 접지 연결 누락 | 박지훈 | 2026-10-14 |
+| ISS-019 | 3F | C | open | plumbing | 급수 본관 누수: C구역 급수 본관 용접부에서 물이 샘 | 한도윤 | 2026-10-16 |
+| ISS-021 | 3F | B | open | electrical | 분전반 결선 오류: B구역 분전반의 상 결선이 도면과 다름 | **없음** | 2026-10-20 |
+| ISS-026 | 4F | A | in_progress | structural | 보 철근 간격 불량: A구역 G2 보의 늑근 간격이 설계보다 넓음 | 윤재석 | 2026-10-23 |
+
+**참고:**
+- ISS-004, ISS-010, ISS-021 3건은 담당자가 정해지지 않았습니다.
+- ISS-004는 미해결 critical 중 가장 오래된 건입니다(2026-10-04 생성).
+- 6건 중 3건(ISS-010, ISS-014, ISS-021)이 전기 공종입니다.
+
+## 3. 조회한 critical 이슈 원본 전체 (8건, 모든 상태)
+
+| ID | 제목 | 층 | 구역 | 공종 | 상태 | 생성일 | 담당자 | 설명 |
+|---|---|---|---|---|---|---|---|---|
+| ISS-004 | 1층 방화셔터 작동 불량 | 1F | C | fire_protection | open | 2026-10-04 | null | C구역 방화셔터가 연동 시험에서 하강하지 않았다. |
+| ISS-007 | 2층 슬래브 균열 | 2F | B | structural | resolved | 2026-10-06 | 임하늘 | B구역 슬래브 하부 균열을 에폭시 주입으로 보수했다. |
+| ISS-009 | 3층 주 분전반 과열 흔적 | 3F | A | electrical | resolved | 2026-10-05 | 최유진 | 주 분전반 단자 변색을 확인하고 단자를 재체결했다. |
+| ISS-010 | 2층 B구역 콘센트 회로 누전 | 2F | B | electrical | open | 2026-10-09 | null | B구역 콘센트 회로에서 절연저항 측정값이 기준 미달이다. |
+| ISS-014 | 3층 A구역 케이블 트레이 접지 누락 | 3F | A | electrical | in_progress | 2026-10-14 | 박지훈 | A구역 케이블 트레이 12m 구간의 접지 본딩이 누락되었다. |
+| ISS-019 | 3층 C구역 급수 본관 누수 | 3F | C | plumbing | open | 2026-10-16 | 한도윤 | C구역 급수 본관 용접부에서 누수가 발생했다. |
+| ISS-021 | 3층 B구역 분전반 결선 오류 | 3F | B | electrical | open | 2026-10-20 | null | B구역 분전반의 상 결선이 도면과 다르다. |
+| ISS-026 | 4층 보 철근 간격 불량 | 4F | A | structural | in_progress | 2026-10-23 | 윤재석 | A구역 G2 보의 늑근 간격이 설계보다 넓다. |
+
+상태별로 보면 open 4건, in_progress 2건, resolved 2건입니다. 집계에서 뺀 resolved 2건은 ISS-007과 ISS-009입니다.Tallying up the scores, option 3 comes out highest, so that's where I should focus.
+
+
+Tool #3: WeeklyReport

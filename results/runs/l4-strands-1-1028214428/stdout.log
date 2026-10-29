@@ -1,0 +1,61 @@
+
+Tool #1: skills
+
+Tool #2: search_issues
+
+Tool #3: ask_progress_analyst
+
+Tool #1: get_progress
+Checking the gaps, electrical shows the largest shortfall at 15 percentage points, followed by plumbing at 12, structural and fire at 5 each, and finishing at 3. I'm computing completion ratios: electrical at 72.7%, plumbing 80%, structural 94.7%, fire 88.9%, and still working out finishing's ratio.
+
+# 3층(3F) 공정률 및 지연 현황 (2026-10-26 기준)
+
+3층은 5개 공종이 모두 계획보다 늦습니다. 이 중 **전기 공종이 15%p로 가장 많이 지연되고 있습니다.**
+
+## 공종별 공정률
+
+| 공종 | 계획 | 실적 | 차이 | 계획 대비 달성률 |
+|---|---|---|---|---|
+| **전기** | 55% | 40% | **-15%p** | 72.7% |
+| 배관(설비) | 60% | 48% | -12%p | 80.0% |
+| 골조 | 95% | 90% | -5%p | 94.7% |
+| 소방 | 45% | 40% | -5%p | 88.9% |
+| 마감 | 25% | 22% | -3%p | 88.0% |
+
+5개 공종의 단순 평균은 계획 56%, 실적 48%로 약 8%p 늦습니다. 공종별 물량이나 비중을 반영하지 않은 값이므로 참고용으로만 봐 주세요.
+
+## 전기 공종 지연
+- **현황:** 계획 55%, 실적 40%로 15%p 늦습니다. 3층 공종 중 차이가 가장 크고, 계획 대비 달성률도 72.7%로 가장 낮습니다.
+- **함께 볼 점:** 배관 공종도 12%p 늦습니다. 전기·배관 같은 MEP 공종이 함께 지연되고 있는 것으로 보입니다. 이 공종들은 보통 천장과 벽체 마감보다 먼저 진행되므로, 지연이 이어지면 이후 마감 공정에도 영향을 줄 수 있습니다.
+- **원인:** 조회한 자료에는 공정률 수치만 있고 지연 원인은 없습니다. 원인은 현장 확인이 필요합니다.
+
+## 정리
+1. **많이 지연된 공종:** 전기(-15%p)와 배관(-12%p)
+2. **약간 지연된 공종:** 골조와 소방(각 -5%p), 마감(-3%p)
+3. **권장 사항:** 전기 공종의 인력, 자재 반입, 선행 공정과의 간섭 등 지연 원인을 점검해 보세요. 배관과 함께 만회 계획을 세우는 것도 검토할 만합니다.
+
+다른 층의 전기 공정률도 확인하면 3층만의 문제인지 건물 전체의 문제인지 판단할 수 있습니다. 필요하면 조회해 드리겠습니다.I count four unresolved issues—ISS-014, 017, 021, 024—with 014 and 021 marked critical, so I need their created_at timestamps and the crew list for those.
+
+
+Tool #4: get_issue
+
+Tool #5: get_issue
+
+Tool #6: list_crew
+Four items remain unresolved: 014, 017, 021, 024. Comparing the critical ones, 014 (10-14) looks more urgent than 021 (10-20), so I'll flag ISS-014 as top priority and recommend 이서연 for it. Delays of 10 days or more also show up in 전기 (15 days) and 설비 (12 days), worth noting separately.
+
+사내 규칙에 따라 리포트를 작성했습니다.
+
+[주간 리포트] 3F 전기
+미해결: 4건
+최우선: ISS-014
+담당 추천: 이서연
+지연 공종: 전기 15%p, 설비 12%p
+3층 전기 공종의 미해결 이슈는 4건이며, 이 중 2건이 critical입니다. 가장 먼저 처리할 이슈는 2026-10-14에 생성된 ISS-014(A구역 케이블 트레이 접지 누락)이고, 지금 박지훈 님이 처리하고 있습니다. 같은 critical 등급인 ISS-021(B구역 분전반 결선 오류)은 아직 담당자가 없습니다. 3층 전기 공정률은 계획 55%, 실적 40%로 15%p 늦어 3층 공종 중 지연 폭이 가장 큽니다.
+문서번호: WR-3F-EL
+
+참고 사항
+- 미해결 4건은 ISS-014(진행 중, critical), ISS-021(미착수, critical), ISS-017(미착수, high), ISS-024(진행 중, medium)입니다. 해결된 ISS-009와 ISS-012는 건수에서 뺐습니다.
+- ISS-014와 ISS-021은 둘 다 critical이라 규칙대로 생성일이 더 이른 ISS-014를 최우선으로 정했습니다.
+- 이서연 님은 전기 작업자 중 현재 배정 건수가 1건으로 가장 적어 담당으로 추천했습니다.
+- 공정 분석가에 따르면 받은 자료에는 공정률 수치만 있어 지연 원인은 알 수 없습니다. 원인은 현장에서 확인해야 합니다.

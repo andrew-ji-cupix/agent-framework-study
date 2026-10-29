@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-openai-agents-1-1028215831",
+ "batch": "final",
+ "task": "l6",
+ "candidate": "openai-agents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 29.04,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 3,
+ "llm_calls": 7,
+ "input_tokens": 15410,
+ "output_tokens": 1623,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 261,
+ "cost": 0.0941,
+ "first_input_tokens": 1538,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

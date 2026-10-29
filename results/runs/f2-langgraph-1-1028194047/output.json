@@ -1,0 +1,54 @@
+{
+ "delayed_trades": [
+  {
+   "level": "1F",
+   "trade": "fire_protection",
+   "gap": 18
+  },
+  {
+   "level": "3F",
+   "trade": "electrical",
+   "gap": 15
+  },
+  {
+   "level": "1F",
+   "trade": "electrical",
+   "gap": 14
+  },
+  {
+   "level": "4F",
+   "trade": "structural",
+   "gap": 14
+  },
+  {
+   "level": "3F",
+   "trade": "plumbing",
+   "gap": 12
+  },
+  {
+   "level": "4F",
+   "trade": "fire_protection",
+   "gap": 10
+  }
+ ],
+ "critical_by_level": [
+  {
+   "level": "1F",
+   "count": 1
+  },
+  {
+   "level": "2F",
+   "count": 1
+  },
+  {
+   "level": "3F",
+   "count": 3
+  },
+  {
+   "level": "4F",
+   "count": 1
+  }
+ ],
+ "focus_level": "3F",
+ "summary": "2026-10-26 기준으로 계획보다 10%p 이상 늦은 공종은 6건이며, 1F·3F·4F에 2건씩 있고 가장 크게 늦은 것은 1F 소방(18%p)입니다. 아직 해결되지 않은 critical 이슈는 모두 6건이며, 이번 주 생성분만이 아니라 현재 미해결 상태인 전체 건수입니다(생성일 10월 4일~23일). 층별로는 3F가 3건, 1F·2F·4F가 1건씩입니다. 3F는 지연 공종 2건과 critical 이슈 3건을 합쳐 5건으로 가장 많아 집중 관리 층으로 정했고, 특히 전기 공종이 15%p 늦은 데다 전기 critical 이슈도 2건이 몰려 있습니다. 담당자가 없는 open 상태 critical 이슈 3건(ISS-004, ISS-010, ISS-021)은 바로 담당자를 정해야 합니다."
+}

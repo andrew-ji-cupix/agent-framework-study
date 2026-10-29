@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-mastra-1-1028214620",
+ "batch": "final",
+ "task": "l4",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 25.04,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 2,
+ "llm_calls": 5,
+ "input_tokens": 14189,
+ "output_tokens": 1829,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 369,
+ "cost": 0.093336,
+ "first_input_tokens": 2623,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

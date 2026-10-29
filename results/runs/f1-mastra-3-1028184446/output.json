@@ -1,0 +1,12 @@
+{
+ "level": "3F",
+ "trade": "electrical",
+ "open_count": 4,
+ "critical_ids": [
+  "ISS-014",
+  "ISS-021"
+ ],
+ "top_priority_issue_id": "ISS-014",
+ "recommended_assignee": "이서연",
+ "summary": "3층 전기 공종의 미해결 이슈는 모두 4건입니다(open 2건, in_progress 2건). 이 중 critical은 2건으로, 2026-10-14에 생성된 ISS-014(A구역 케이블 트레이 접지 누락, 진행 중, 담당 박지훈)가 2026-10-20에 생성된 ISS-021(B구역 분전반 결선 오류, 미배정)보다 먼저 생겨 최우선입니다. 전기 작업자 중 배정 건수가 1건으로 가장 적은 이서연이 추천 담당자이며, 아직 담당자가 없는 ISS-021을 맡기는 방안을 검토할 수 있습니다."
+}

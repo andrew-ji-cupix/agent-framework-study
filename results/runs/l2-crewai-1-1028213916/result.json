@@ -1,0 +1,27 @@
+{
+ "run_id": "l2-crewai-1-1028213916",
+ "batch": "final",
+ "task": "l2",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 12.47,
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n참고: ISS-014(10-14 생성)와 ISS-021(10-20 생성)이 둘 다 critical이라 생성일이 더 이른 ISS-014를 골랐습니다. ISS-014는 진행 중이며 이미 박지훈(2건)에게 배정되어 있습니다. 이서연은 1건으로 배정 건수가 가장 적습니다.",
+ "llm_calls": 3,
+ "input_tokens": 5501,
+ "output_tokens": 663,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 168,
+ "cost": 0.035264,
+ "first_input_tokens": 1181,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

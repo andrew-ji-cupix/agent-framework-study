@@ -1,0 +1,54 @@
+{
+ "delayed_trades": [
+  {
+   "level": "1F",
+   "trade": "fire_protection",
+   "gap": 18
+  },
+  {
+   "level": "3F",
+   "trade": "electrical",
+   "gap": 15
+  },
+  {
+   "level": "1F",
+   "trade": "electrical",
+   "gap": 14
+  },
+  {
+   "level": "4F",
+   "trade": "structural",
+   "gap": 14
+  },
+  {
+   "level": "3F",
+   "trade": "plumbing",
+   "gap": 12
+  },
+  {
+   "level": "4F",
+   "trade": "fire_protection",
+   "gap": 10
+  }
+ ],
+ "critical_by_level": [
+  {
+   "level": "1F",
+   "count": 1
+  },
+  {
+   "level": "2F",
+   "count": 1
+  },
+  {
+   "level": "3F",
+   "count": 3
+  },
+  {
+   "level": "4F",
+   "count": 1
+  }
+ ],
+ "focus_level": "3F",
+ "summary": "2026-10-26 기준으로 30개 층·공종 중 6개가 계획보다 10%p 이상 늦습니다. 가장 많이 늦은 곳은 1F 소방(fire_protection)으로 18%p이고, 그다음은 3F 전기 15%p입니다. 아직 해결되지 않은 critical 이슈는 1F·2F·3F·4F에 총 6건이며, 이슈에 따로 기간을 정하지 않고 현재 open 또는 in_progress인 이슈를 모두 셌습니다. 3F는 지연 공종 2개(전기·배관)와 미해결 critical 이슈 3건(접지 누락, 급수 본관 누수, 분전반 결선 불일치)이 겹쳐 점수가 5로 가장 높으므로 3F를 집중 관리 층으로 정했습니다. 담당자가 없는 critical 이슈 3건(ISS-004, ISS-010, ISS-021)은 바로 담당자를 정해야 합니다."
+}

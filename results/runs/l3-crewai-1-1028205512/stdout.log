@@ -1,0 +1,171 @@
+╭──────────────────────────── 🤖 LiteAgent Started ────────────────────────────╮
+│                                                                              │
+│  LiteAgent Started                                                           │
+│  Role: 현장 이슈 비서                                                        │
+│  Status: In Progress                                                         │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────── 🤖 LiteAgent Started ────────────────────────────╮
+│                                                                              │
+│  LiteAgent Session Started                                                   │
+│  Name: 현장 이슈 비서                                                        │
+│  id: aed3bdd1-d058-4b87-ac6c-2768655f04db                                    │
+│  role: 현장 이슈 비서                                                        │
+│  goal: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고 추측하지     │
+│  않습니다.                                                                   │
+│  backstory: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고         │
+│  추측하지 않습니다.                                                          │
+│  tools: search_issues, get_issue, list_crew, load_skill                      │
+│  verbose: False                                                              │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#1) ───────────────────────╮
+│                                                                              │
+│  Tool: load_skill                                                            │
+│  Args: {'skill_name': 'site-weekly-report'}                                  │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Tool Execution Completed (#1) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: load_skill                                                            │
+│  Output: <skill name="site-weekly-report">                                   │
+│  현장 주간 리포트를 작성할 때 따르는 사내 형식과 규칙. 주간 리포트나 현장    │
+│  리포트를 써 달라는 요청에 사용한다.                                         │
+│                                                                              │
+│  # 현장 주간 리포트 작성 규칙                                                │
+│                                                                              │
+│  리포트는 마크다운 기호 없이 아래 순서의 일반 텍스트 줄로 쓴다.              │
+│                                                                              │
+│  1. 첫 줄: `[주간 리포트] <층> <공종 한국어명>` (예: `[주간 리포트] 3F       │
+│  전기`)                                                                      │
+│  2. `미해결: <건수>건` — 상태가 open 또는 in_progress인 이슈 수              │
+│  3. `최우선: <이슈 ID>` — 심각도가 가장 높은 미해결 이슈. 같으면             │
+│  생성일(created_at)이 가장 이른 이슈                                         │
+│  4. `담당 추천: <이름>` — 해당 공종 작업자 중 현재 배정                      │
+│  건수(open_assignments)가 가장 적은 사람                                     │
+│  5. 공정 지연 정보가 있을 때만: `지연 공종: <공종 한국어명> <지연 폭>%p,     │
+│  ...` — 지연 폭(계획 - 실적)이 10%p 이상인 공종만, 큰 순서로                 │
+│  6. 요약 2~3문장                                                             │
+│  7. 마지막 줄: `문서번호: WR-<층>-<공종 코드>`                               │
+│                                                                              │
+│  공종 한국어명: electrical=전기, plumbing=설비, structural=골조,             │
+│  finishing=마감, fire_protection=소방                                        │
+│  공종 코드: electrical=EL, plumbing=PL, structural=ST, finishing=FN,         │
+│  fire_protection=FP                                                          │
+│  </skill>                                                                    │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#1) ───────────────────────╮
+│                                                                              │
+│  Tool: search_issues                                                         │
+│  Args: {'level': '3F', 'trade': 'electrical', 'status': ''}                  │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#1) ───────────────────────╮
+│                                                                              │
+│  Tool: list_crew                                                             │
+│  Args: {'trade': 'electrical'}                                               │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Tool Execution Completed (#1) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: search_issues                                                         │
+│  Output: [{'id': 'ISS-009', 'title': '3층 주 분전반 과열 흔적', 'level':     │
+│  '3F', 'trade': 'electrical', 'status': 'resolved', 'severity':              │
+│  'critical'}, {'id': 'ISS-012', 'title': '3층 C구역 스위치 커버 파손',       │
+│  'level': '3F', 'trade': 'electrical', 'status': 'resolved', 'severity':     │
+│  'low'}, {'id': 'ISS-014', 'title': '3층 A구역 케이블 트레이 접지 누락',     │
+│  'level': '3F', 'trade': 'electrical', 'status': 'in_progress', 'severity':  │
+│  'critical'}, {'id': 'ISS-017', 'title': '3층 복도 조명 회로 단선',          │
+│  'level': '3F', 'trade': 'electrical', 'status': 'open', 'severity':         │
+│  'high'}, {'id': 'ISS-021', 'title': '3층 B구역 분전반 결선 오류', 'level':  │
+│  '3F', 'trade': 'electrical', 'status': 'open', 'severity': 'critical'},     │
+│  {'id': 'ISS-024', 'title': '3층 C구역 콘센트 높이 불일치', 'level': '3F',   │
+│  'trade': 'electrical', 'status': 'in_progress', 'severity': 'medium'}]      │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Tool Execution Completed (#1) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: list_crew                                                             │
+│  Output: [{'name': '김민수', 'trade': 'electrical', 'open_assignments': 3},  │
+│  {'name': '박지훈', 'trade': 'electrical', 'open_assignments': 2}, {'name':  │
+│  '이서연', 'trade': 'electrical', 'open_assignments': 1}, {'name':           │
+│  '최유진', 'trade': 'electrical', 'open_assignments': 4}]                    │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#2) ───────────────────────╮
+│                                                                              │
+│  Tool: get_issue                                                             │
+│  Args: {'issue_id': 'ISS-014'}                                               │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#1) ───────────────────────╮
+│                                                                              │
+│  Tool: get_issue                                                             │
+│  Args: {'issue_id': 'ISS-021'}                                               │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────── ✅ Tool Execution Completed (#2) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: get_issue                                                             │
+│  Output: {'id': 'ISS-014', 'title': '3층 A구역 케이블 트레이 접지 누락',     │
+│  'level': '3F', 'zone': 'A', 'trade': 'electrical', 'status':                │
+│  'in_progress', 'severity': 'critical', 'created_at': '2026-10-14',          │
+│  'assignee': '박지훈', 'description': 'A구역 케이블 트레이 12m 구간의 접지   │
+│  본딩이 누락되었다.'}                                                        │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+╭────────────────────── ✅ Tool Execution Completed (#2) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: get_issue                                                             │
+│  Output: {'id': 'ISS-021', 'title': '3층 B구역 분전반 결선 오류', 'level':   │
+│  '3F', 'zone': 'B', 'trade': 'electrical', 'status': 'open', 'severity':     │
+│  'critical', 'created_at': '2026-10-20', 'assignee': None, 'description':    │
+│  'B구역 분전반의 상 결선이 도면과 다르다.'}                                  │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────── ✅ LiteAgent Completed ───────────────────────────╮
+│                                                                              │
+│  LiteAgent Completed                                                         │
+│  Role: 현장 이슈 비서                                                        │
+│  id: aed3bdd1-d058-4b87-ac6c-2768655f04db                                    │
+│  role: 현장 이슈 비서                                                        │
+│  goal: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고 추측하지     │
+│  않습니다.                                                                   │
+│  backstory: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고         │
+│  추측하지 않습니다.                                                          │
+│  tools: search_issues, get_issue, list_crew, load_skill                      │
+│  verbose: False                                                              │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+

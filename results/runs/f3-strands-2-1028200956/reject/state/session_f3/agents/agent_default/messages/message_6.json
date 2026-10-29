@@ -1,0 +1,23 @@
+{
+  "message": {
+    "role": "user",
+    "content": [
+      {
+        "toolResult": {
+          "toolUseId": "toolu_012h9XBWSLDRXUt6p8atmPZh",
+          "status": "error",
+          "content": [
+            {
+              "text": "현장 관리자가 이 배정을 거절했습니다. 다시 시도하지 말고 작업을 끝내세요."
+            }
+          ]
+        }
+      }
+    ],
+    "tracking_id": "de83d865-9cc9-4f6b-b675-8cf62921ccfd"
+  },
+  "message_id": 6,
+  "redact_message": null,
+  "created_at": "2026-10-28T11:10:13.529813+00:00",
+  "updated_at": "2026-10-28T11:10:13.529816+00:00"
+}

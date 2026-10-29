@@ -1,0 +1,28 @@
+{
+  "message": {
+    "role": "assistant",
+    "content": [
+      {
+        "text": "ISS-021(3층 B구역 분전반 결선 오류, 전기)을 전기 작업자 중 현재 배정 건수가 1건으로 가장 적은 이서연 님에게 배정했습니다."
+      }
+    ],
+    "metadata": {
+      "usage": {
+        "inputTokens": 1357,
+        "outputTokens": 76,
+        "totalTokens": 1433,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 0,
+        "timeToFirstByteMs": 2333
+      }
+    },
+    "tracking_id": "fdbdbaa0-2788-4175-999e-c3e0168b46f6"
+  },
+  "message_id": 7,
+  "redact_message": null,
+  "created_at": "2026-10-28T11:07:34.828946+00:00",
+  "updated_at": "2026-10-28T11:07:34.829028+00:00"
+}

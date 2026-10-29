@@ -1,0 +1,54 @@
+
+Tool #1: save_memory
+장기 메모리에 저장해 두었습니다. 다음 대화부터는 주간 리포트를 작성할 때 마지막 줄 바로 위에 `검토 요청: 김현장 소장` 줄을 넣겠습니다.
+Tool #1: skills
+
+Tool #2: search_issues
+
+Tool #3: ask_progress_analyst
+
+Tool #1: get_progress
+I'm calculating the gaps between planned and actual progress per category — structural down 5, plumbing down 12, electrical down 15, finishing down 3, fire down 5 — and comparing unweighted averages: planned 56% versus actual 48%. Plumbing's at 80% of its target while electrical lags at roughly 73%.
+
+**3층(3F)은 5개 공종이 모두 계획보다 늦어지고 있고, 전기 공종의 지연이 −15%p로 가장 큽니다.** (2026-10-26 기준)
+
+| 공종 | 계획 | 실적 | 차이 | 계획 대비 달성률 |
+|---|---|---|---|---|
+| 구조 | 95% | 90% | −5%p | 94.7% |
+| 설비(배관) | 60% | 48% | −12%p | 80.0% |
+| **전기** | **55%** | **40%** | **−15%p** | **72.7%** |
+| 마감 | 25% | 22% | −3%p | 88.0% |
+| 소방 | 45% | 40% | −5%p | 88.9% |
+
+**3층 전체:** 5개 공종을 같은 비중으로 단순 평균하면 계획 56%, 실적 48%로 약 8%p 늦습니다. 공종별 비중(물량이나 금액)은 데이터에 없어서 반영하지 못했습니다.
+
+**전기 공종 지연:**
+- 계획 55%에 실적 40%로 15%p 늦어, 3층에서 지연폭이 가장 큽니다.
+- 계획 물량의 약 73%만 끝났습니다. 계획 대비 달성률도 공종 중 가장 낮습니다.
+- 설비(배관)도 −12%p로 크게 늦어지고 있어, 두 공종을 함께 관리할 필요가 있어 보입니다.
+
+**그 밖의 공종:** 구조(−5%p), 소방(−5%p), 마감(−3%p)은 지연폭이 비교적 작습니다.
+
+도구에서 받은 데이터는 계획과 실적 공정률뿐입니다. 지연 원인(자재, 인력, 선행 공정 등)이나 공정이 서로 어떻게 맞물리는지는 이 데이터로 판단할 수 없습니다.Critical open: ISS-014, ISS-021. Need created_at.
+Tool #4: get_issue
+
+Tool #5: get_issue
+
+Tool #6: list_crew
+I need to apply the rule that delay trades ≥10 percentage points should be listed largest first - electrical at 15 and facilities at 12 both qualify, so even though the report focuses on 3F electrical, I should include both trades per the delay guideline. I'll double-check this against the line before the last one to make sure I'm applying the rule correctly.
+
+[주간 리포트] 3F 전기
+미해결: 4건
+최우선: ISS-014
+담당 추천: 이서연
+지연 공종: 전기 15%p, 설비 12%p
+3층 전기 공종의 미해결 이슈는 4건이며, 그중 심각도 critical인 이슈는 A구역 케이블 트레이 접지 누락(ISS-014, 진행 중)과 B구역 분전반 결선 오류(ISS-021, 미배정)입니다. 2026-10-26 기준 3층 전기 공종은 계획 55% 대비 실적 40%로 15%p 늦어 3층에서 지연 폭이 가장 큽니다. 설비 공종도 12%p 늦어지고 있습니다.
+검토 요청: 김현장 소장
+문서번호: WR-3F-EL
+
+---
+작성 근거:
+- 미해결 4건은 ISS-014와 ISS-024(진행 중), ISS-017과 ISS-021(미착수)입니다. 해결된 ISS-009와 ISS-012는 세지 않았습니다.
+- 최우선 이슈: critical인 미해결 이슈는 ISS-014와 ISS-021입니다. 생성일이 더 이른 ISS-014(2026-10-14)를 골랐습니다. ISS-021은 2026-10-20에 생성됐습니다.
+- 담당 추천: 전기 작업자 중 현재 배정 건수가 가장 적은 사람은 이서연(1건)입니다. 김민수는 3건, 박지훈은 2건, 최유진은 4건입니다. ISS-021은 아직 담당자가 없어 먼저 배정이 필요해 보입니다.
+- 지연 공종: 공정 분석가 데이터에서 3층 공종 중 지연 폭이 10%p 이상인 전기와 설비만 넣었습니다. 지연 원인은 데이터에 없어 넣지 않았습니다.

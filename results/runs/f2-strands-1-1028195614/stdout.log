@@ -1,0 +1,116 @@
+
+Tool #1: ask_progress_analyst
+
+Tool #2: ask_issue_analyst
+
+Tool #1: get_progress
+I should search for issues with both open and in_progress statuses in parallel, checking whether the results include severity info.
+
+
+Tool #1: search_issues
+
+Tool #2: search_issues
+Checking each floor's items for gaps of 10 or more, I find six qualifying cases: 1F electrical (14), 1F fire (18), 3F plumbing (12), 3F electrical (15), 4F structural (14), and 4F fire (10). Everything else, including all of B1, falls below the threshold.
+
+I need created_at to verify "this week," but search only gives summaries. I'll fetch details on the 6 critical issues to check their dates, just to be safe since it's a cheap check.
+
+
+Tool #3: get_issue
+
+Tool #4: get_issue
+
+Tool #5: get_issue
+
+Tool #6: get_issue
+
+Tool #7: get_issue
+
+Tool #8: get_issue
+There's no explicit date given for "this week," and the created dates span from 10-04 to 10-23, so I don't want to guess which days count. I'll just report all 6 entries along with their created_at dates and flag the ambiguity.
+
+도구로 이번 주 공정률 30건(6개 층 × 5개 공종)을 모두 조회했습니다. 기준일은 2026-10-26입니다. **계획 공정률 − 실적 공정률이 10%p 이상인 항목은 6건**입니다.
+
+## gap ≥ 10인 층·공종 (gap 큰 순)
+
+| 층 | 공종 | planned_pct | actual_pct | gap |
+|---|---|---|---|---|
+| 1F | fire_protection | 70 | 52 | **18** |
+| 3F | electrical | 55 | 40 | **15** |
+| 1F | electrical | 80 | 66 | **14** |
+| 4F | structural | 80 | 66 | **14** |
+| 3F | plumbing | 60 | 48 | **12** |
+| 4F | fire_protection | 25 | 15 | **10** |
+
+- 4F fire_protection은 gap이 정확히 10이라 "≥ 10" 조건에 맞아 포함했습니다.
+- 바로 아래 값은 2F electrical(gap 9)로, 기준에 1%p 못 미쳐 제외했습니다.
+
+## 전체 원자료 (as_of: 2026-10-26)
+
+| 층 | 공종 | planned_pct | actual_pct | gap |
+|---|---|---|---|---|
+| B1 | structural | 100 | 100 | 0 |
+| B1 | plumbing | 95 | 90 | 5 |
+| B1 | electrical | 90 | 85 | 5 |
+| B1 | finishing | 60 | 55 | 5 |
+| B1 | fire_protection | 80 | 78 | 2 |
+| 1F | structural | 100 | 100 | 0 |
+| 1F | plumbing | 85 | 80 | 5 |
+| 1F | electrical | 80 | 66 | 14 |
+| 1F | finishing | 50 | 45 | 5 |
+| 1F | fire_protection | 70 | 52 | 18 |
+| 2F | structural | 100 | 98 | 2 |
+| 2F | plumbing | 75 | 70 | 5 |
+| 2F | electrical | 70 | 61 | 9 |
+| 2F | finishing | 40 | 38 | 2 |
+| 2F | fire_protection | 60 | 57 | 3 |
+| 3F | structural | 95 | 90 | 5 |
+| 3F | plumbing | 60 | 48 | 12 |
+| 3F | electrical | 55 | 40 | 15 |
+| 3F | finishing | 25 | 22 | 3 |
+| 3F | fire_protection | 45 | 40 | 5 |
+| 4F | structural | 80 | 66 | 14 |
+| 4F | plumbing | 40 | 35 | 5 |
+| 4F | electrical | 35 | 30 | 5 |
+| 4F | finishing | 10 | 10 | 0 |
+| 4F | fire_protection | 25 | 15 | 10 |
+| RF | structural | 60 | 55 | 5 |
+| RF | plumbing | 20 | 18 | 2 |
+| RF | electrical | 15 | 14 | 1 |
+| RF | finishing | 0 | 0 | 0 |
+| RF | fire_protection | 10 | 9 | 1 |
+
+gap 열은 도구가 준 값이 아니라 planned_pct − actual_pct로 계산해 덧붙인 것입니다. 지연 원인은 도구 데이터에 없어서 적지 않았습니다.조회된 이슈 중 severity가 critical이고 status가 open 또는 in_progress인 이슈는 **총 6건**이며, 4개 층에 분포합니다.
+
+## 층별 집계 (0건인 층 제외)
+
+| 층 | 건수 |
+|---|---|
+| 1F | 1 |
+| 2F | 1 |
+| 3F | 3 |
+| 4F | 1 |
+| **합계** | **6** |
+
+B1과 RF에는 조건에 맞는 이슈가 없습니다.
+
+## 이슈 목록
+
+| ID | 층 | severity | status | 제목 | created_at |
+|---|---|---|---|---|---|
+| ISS-004 | 1F | critical | open | 1층 방화셔터 작동 불량 | 2026-10-04 |
+| ISS-010 | 2F | critical | open | 2층 B구역 콘센트 회로 누전 | 2026-10-09 |
+| ISS-014 | 3F | critical | in_progress | 3층 A구역 케이블 트레이 접지 누락 | 2026-10-14 |
+| ISS-019 | 3F | critical | open | 3층 C구역 급수 본관 누수 | 2026-10-16 |
+| ISS-021 | 3F | critical | open | 3층 B구역 분전반 결선 오류 | 2026-10-20 |
+| ISS-026 | 4F | critical | in_progress | 4층 보 철근 간격 불량 | 2026-10-23 |
+
+## 확인 방법
+- `search_issues`로 status를 open과 in_progress로 각각 조회했습니다. 결과는 각각 16건과 7건이었고, 그중 severity가 critical인 이슈를 골랐습니다.
+- 고른 6건은 모두 `get_issue`로 다시 조회해 층, severity, status 값이 같은지 확인했습니다.
+
+## 확인이 필요한 점
+- **"이번 주"의 기간을 판단하지 못했습니다.** 도구에서는 기준 날짜나 주 단위 범위를 알 수 없습니다. 6건의 생성일은 2026-10-04부터 2026-10-23까지 약 3주에 걸쳐 있습니다. 그래서 날짜로 거르지 않고 조회된 6건을 모두 포함했습니다. 기준 주를 알려 주시면 생성일 기준으로 다시 걸러 드리겠습니다.
+- 담당자가 없는(null) critical 이슈가 3건 있습니다(ISS-004, ISS-010, ISS-021). 따로 확인해 보시는 것이 좋겠습니다.Totaling up floors with delays, 3F stands out with 5 combined issues, making it the clear focus. I also want to note that the unresolved critical count reflects current state rather than items created this week, so it's fine to include all of them.
+
+
+Tool #3: WeeklyReport

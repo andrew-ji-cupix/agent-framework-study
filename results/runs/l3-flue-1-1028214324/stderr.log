@@ -1,0 +1,39 @@
+(node:1) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ▗  flue run
+ ▚  agent     IssueAssistant
+ ▘  id        01M618JS0NZH5P0EZ41ZC6MGP8
+    db        node_modules/.cache/flue/run.db
+
+user
+  3층 전기 공종의 주간 리포트를 작성하세요. 사내 "현장 주간 리포트" 작성 규칙을 따르세요.
+
+tool activate_skill
+tool search_issues
+tool list_crew
+tool done activate_skill
+tool done search_issues
+tool done list_crew
+assistant
+  Unresolved: 014, 017, 021, 024 = 4. Critical: 014, 021 — need created_at.
+tool get_issue
+tool get_issue
+tool done get_issue
+tool done get_issue
+thinking
+  There's no delay information available, so I'll skip that line entirely.
+  
+  [주간 리포트] 3F 전기
+  미해결: 4건
+  최우선: ISS-014
+  담당 추천: 이서연
+  3층 전기 공종의 미해결 이슈는 4건입니다. 진행 중 2건(ISS-014, ISS-024), 미착수 2건(ISS-017, ISS-021)입니다. 심각도 critical 이슈는 2건입니다. 2026-10-14에 생성된 A구역 케이블 트레이 접지 누락(ISS-014)은 박지훈 님이 처리 중입니다. 2026-10-20에 생성된 B구역 분전반 결선 오류(ISS-021)는 아직 담당자가 없습니다. 현재 배정 건수가 1건으로 가장 적은 이서연 님에게 ISS-021을 맡기는 것을 권장합니다.
+  문서번호: WR-3F-EL
+  
+  참고:
+  1. 최우선 이슈: critical 이슈가 ISS-014와 ISS-021 두 건이어서 생성일로 정했습니다. 더 먼저 생성된 ISS-014를 골랐습니다.
+  2. 지연 공종: 이 줄은 넣지 않았습니다. 조회한 데이터에 공정 지연 정보가 없었고, 규칙상 지연 정보가 있을 때만 쓰는 항목입니다.
+
+    id        01M618JS0NZH5P0EZ41ZC6MGP8
+    uid       inst_01M618JS4BXBG4C0YYFZK0057M
+done agent completed

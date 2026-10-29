@@ -1,0 +1,46 @@
+{
+ "run_id": "f1-crewai-1-1028183112",
+ "batch": "final",
+ "task": "f1",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 12.27,
+ "success": true,
+ "fields": {
+  "open_count": true,
+  "critical_ids": true,
+  "top_priority_issue_id": true,
+  "recommended_assignee": true
+ },
+ "got": {
+  "open_count": 4,
+  "critical_ids": [
+   "ISS-014",
+   "ISS-021"
+  ],
+  "top_priority_issue_id": "ISS-014",
+  "recommended_assignee": "이서연"
+ },
+ "expected": {
+  "open_count": 4,
+  "critical_ids": [
+   "ISS-014",
+   "ISS-021"
+  ],
+  "top_priority_issue_id": "ISS-014",
+  "recommended_assignee": "이서연"
+ },
+ "llm_calls": 3,
+ "input_tokens": 8297,
+ "output_tokens": 664,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 0,
+ "cost": 0.046468,
+ "first_input_tokens": 2113,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

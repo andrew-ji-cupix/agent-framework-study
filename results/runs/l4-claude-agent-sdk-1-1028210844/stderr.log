@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/opt/h/claude-agent-sdk/l4.py", line 51, in <module>
+    asyncio.run(main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/h/claude-agent-sdk/l4.py", line 46, in main
+    async for message in query(prompt=prompt("l4"), options=options):
+  File "/opt/h/claude-agent-sdk/.venv/lib/python3.12/site-packages/claude_agent_sdk/query.py", line 129, in query
+    async for message in client.process_query(
+  File "/opt/h/claude-agent-sdk/.venv/lib/python3.12/site-packages/claude_agent_sdk/_internal/client.py", line 56, in process_query
+    async for msg in inner:
+  File "/opt/h/claude-agent-sdk/.venv/lib/python3.12/site-packages/claude_agent_sdk/_internal/client.py", line 178, in _process_query_inner
+    await query.initialize()
+  File "/opt/h/claude-agent-sdk/.venv/lib/python3.12/site-packages/claude_agent_sdk/_internal/query.py", line 358, in initialize
+    response = await self._send_control_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/h/claude-agent-sdk/.venv/lib/python3.12/site-packages/claude_agent_sdk/_internal/query.py", line 733, in _send_control_request
+    await self.transport.write(json.dumps(control_request) + "\n")
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Server is not JSON serializable

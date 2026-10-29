@@ -1,0 +1,81 @@
+{
+ "run_id": "f2-mastra-1-1028194403",
+ "batch": "dev",
+ "task": "f2",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 35.26,
+ "llm_calls": 7,
+ "input_tokens": 19481,
+ "output_tokens": 4054,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 431,
+ "cost": 0.159004,
+ "first_input_tokens": 2642,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "fields": {
+  "delayed_trades": true,
+  "critical_by_level": true,
+  "focus_level": true
+ },
+ "got": {
+  "delayed_trades": [
+   [
+    [
+     "1F",
+     "electrical"
+    ],
+    14
+   ],
+   [
+    [
+     "1F",
+     "fire_protection"
+    ],
+    18
+   ],
+   [
+    [
+     "3F",
+     "electrical"
+    ],
+    15
+   ],
+   [
+    [
+     "3F",
+     "plumbing"
+    ],
+    12
+   ],
+   [
+    [
+     "4F",
+     "fire_protection"
+    ],
+    10
+   ],
+   [
+    [
+     "4F",
+     "structural"
+    ],
+    14
+   ]
+  ],
+  "critical_by_level": {
+   "1F": 1,
+   "2F": 1,
+   "3F": 3,
+   "4F": 1
+  },
+  "focus_level": "3F"
+ },
+ "regraded": true
+}

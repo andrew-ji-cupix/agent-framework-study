@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-crewai-1-1028210606",
+ "batch": "dev",
+ "task": "l4",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 24.68,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 2,
+ "llm_calls": 5,
+ "input_tokens": 11995,
+ "output_tokens": 1879,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 121,
+ "cost": 0.08556,
+ "first_input_tokens": 1948,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

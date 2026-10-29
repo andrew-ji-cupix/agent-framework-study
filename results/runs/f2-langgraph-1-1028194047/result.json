@@ -1,0 +1,81 @@
+{
+ "run_id": "f2-langgraph-1-1028194047",
+ "batch": "dev",
+ "task": "f2",
+ "candidate": "langgraph",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 36.5,
+ "llm_calls": 7,
+ "input_tokens": 16673,
+ "output_tokens": 4173,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 483,
+ "cost": 0.150152,
+ "first_input_tokens": 1965,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "fields": {
+  "delayed_trades": true,
+  "critical_by_level": true,
+  "focus_level": true
+ },
+ "got": {
+  "delayed_trades": [
+   [
+    [
+     "1F",
+     "electrical"
+    ],
+    14
+   ],
+   [
+    [
+     "1F",
+     "fire_protection"
+    ],
+    18
+   ],
+   [
+    [
+     "3F",
+     "electrical"
+    ],
+    15
+   ],
+   [
+    [
+     "3F",
+     "plumbing"
+    ],
+    12
+   ],
+   [
+    [
+     "4F",
+     "fire_protection"
+    ],
+    10
+   ],
+   [
+    [
+     "4F",
+     "structural"
+    ],
+    14
+   ]
+  ],
+  "critical_by_level": {
+   "1F": 1,
+   "2F": 1,
+   "3F": 3,
+   "4F": 1
+  },
+  "focus_level": "3F"
+ },
+ "regraded": true
+}

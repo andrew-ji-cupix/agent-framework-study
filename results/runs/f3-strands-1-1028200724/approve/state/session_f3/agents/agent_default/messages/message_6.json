@@ -1,0 +1,23 @@
+{
+  "message": {
+    "role": "user",
+    "content": [
+      {
+        "toolResult": {
+          "toolUseId": "toolu_017jnhrD6q35A11wywtcF6yw",
+          "status": "success",
+          "content": [
+            {
+              "text": "{\"ok\": true, \"issue_id\": \"ISS-021\", \"assignee\": \"이서연\"}"
+            }
+          ]
+        }
+      }
+    ],
+    "tracking_id": "a8c07d37-e1db-48c3-96af-197e30467f48"
+  },
+  "message_id": 6,
+  "redact_message": null,
+  "created_at": "2026-10-28T11:07:32.468681+00:00",
+  "updated_at": "2026-10-28T11:07:32.468685+00:00"
+}

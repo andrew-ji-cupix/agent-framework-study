@@ -1,0 +1,34 @@
+{
+  "message": {
+    "role": "assistant",
+    "content": [
+      {
+        "toolUse": {
+          "toolUseId": "toolu_0143pgA1139o79HF4aroUiGF",
+          "name": "get_issue",
+          "input": {
+            "issue_id": "ISS-021"
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "usage": {
+        "inputTokens": 889,
+        "outputTokens": 55,
+        "totalTokens": 944,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "metrics": {
+        "latencyMs": 0,
+        "timeToFirstByteMs": 2169
+      }
+    },
+    "tracking_id": "9fbae337-d7d1-421c-bd32-92e3264e0931"
+  },
+  "message_id": 1,
+  "redact_message": null,
+  "created_at": "2026-10-28T11:12:41.574543+00:00",
+  "updated_at": "2026-10-28T11:12:41.574593+00:00"
+}

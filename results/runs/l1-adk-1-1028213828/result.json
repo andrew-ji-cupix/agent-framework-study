@@ -1,0 +1,27 @@
+{
+ "run_id": "l1-adk-1-1028213828",
+ "batch": "final",
+ "task": "l1",
+ "candidate": "adk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 6.42,
+ "success": true,
+ "checks": {
+  "trade": true,
+  "severity": true
+ },
+ "answer": "공종=electrical, 심각도=critical",
+ "llm_calls": 1,
+ "input_tokens": 279,
+ "output_tokens": 48,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 32,
+ "cost": 0.002076,
+ "first_input_tokens": 279,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

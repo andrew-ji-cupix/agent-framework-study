@@ -1,0 +1,36 @@
+{
+ "run_id": "l5-strands-1-1028215027",
+ "batch": "final",
+ "task": "l5",
+ "candidate": "strands",
+ "rep": 1,
+ "returncode": [
+  0,
+  0
+ ],
+ "wall_secs": 29.79,
+ "success": true,
+ "checks": {
+  "remember_step_answered": true,
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "review_line_before_last": true
+ },
+ "agents": 3,
+ "llm_calls": 7,
+ "input_tokens": 13491,
+ "output_tokens": 2305,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 200,
+ "cost": 0.100064,
+ "first_input_tokens": 1463,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

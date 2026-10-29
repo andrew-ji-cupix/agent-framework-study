@@ -1,0 +1,39 @@
+(node:1) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ▗  flue run
+ ▚  agent     IssueAssistant
+ ▘  id        01M6162ZQESTA3D91C19T46X8F
+    db        node_modules/.cache/flue/run.db
+
+user
+  3층 전기 공종의 주간 리포트를 작성하세요. 사내 "현장 주간 리포트" 작성 규칙을 따르세요.
+
+tool activate_skill
+tool search_issues
+tool list_crew
+tool done activate_skill
+tool done search_issues
+tool done list_crew
+assistant
+  Unresolved: 014, 017, 021, 024 = 4. Critical: 014, 021 — need created_at.
+tool get_issue
+tool get_issue
+tool done get_issue
+tool done get_issue
+thinking
+  Since there's no delay data to show, I'll skip that line.
+  
+  [주간 리포트] 3F 전기
+  미해결: 4건
+  최우선: ISS-014
+  담당 추천: 이서연
+  3층 전기 공종의 미해결 이슈는 4건이며, 이 중 critical 등급은 A구역 케이블 트레이 접지 누락(ISS-014, 진행 중)과 B구역 분전반 결선 오류(ISS-021, 미착수)입니다. 두 건은 심각도가 같아 생성일이 더 이른 ISS-014(10/14)를 최우선으로 정했고, ISS-021(10/20)은 아직 담당자가 없어 배정이 필요합니다. 그 밖에 복도 조명 회로 단선(ISS-017, high)과 C구역 콘센트 높이 불일치(ISS-024, medium)가 남아 있습니다.
+  문서번호: WR-3F-EL
+  
+  참고:
+  - 공정 지연 정보는 확인할 수 있는 데이터가 없어 지연 공종 줄은 넣지 않았습니다.
+  - 담당 추천은 전기 작업자 중 현재 배정이 가장 적은 이서연(1건)입니다. 추천만 했고 실제 배정은 하지 않았습니다. 담당자가 없는 ISS-021에 배정할지는 직접 판단해 주세요.
+
+    id        01M6162ZQESTA3D91C19T46X8F
+    uid       inst_01M6162ZVP0K1M3E721SPC3CMA
+done agent completed

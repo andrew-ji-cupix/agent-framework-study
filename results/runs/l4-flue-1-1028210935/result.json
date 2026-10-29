@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-flue-1-1028210935",
+ "batch": "dev",
+ "task": "l4",
+ "candidate": "flue",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 28.45,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 5,
+ "llm_calls": 5,
+ "input_tokens": 12718,
+ "output_tokens": 2183,
+ "cache_read": 6751,
+ "cache_write": 5953,
+ "reasoning_tokens": 0,
+ "cost": 0.074831,
+ "first_input_tokens": 1756,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

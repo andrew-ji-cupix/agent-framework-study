@@ -1,0 +1,27 @@
+{
+ "run_id": "l2-mastra-1-1028210000",
+ "batch": "dev",
+ "task": "l2",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 9.39,
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n참고: ISS-014는 심각도가 critical인 이슈 두 건 중 가장 먼저 생성됐습니다(2026-10-14, ISS-021은 2026-10-20). 이 이슈는 이미 박지훈(현재 2건)에게 배정되어 진행 중입니다. 이서연은 현재 배정이 1건으로 전기 작업자 중 가장 적습니다.",
+ "llm_calls": 3,
+ "input_tokens": 5153,
+ "output_tokens": 633,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 131,
+ "cost": 0.033272,
+ "first_input_tokens": 1132,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

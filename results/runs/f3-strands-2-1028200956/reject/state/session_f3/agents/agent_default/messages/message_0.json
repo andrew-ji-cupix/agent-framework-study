@@ -1,0 +1,15 @@
+{
+  "message": {
+    "role": "user",
+    "content": [
+      {
+        "text": "이슈 ISS-021에 담당자를 배정하세요.\n- 담당자는 이슈 공종의 작업자 중 현재 배정 건수(open_assignments)가 가장 적은 사람입니다.\n- 배정은 assign_issue 도구로 하세요.\n- 끝나면 결과를 한 문장으로 알려 주세요.\n"
+      }
+    ],
+    "tracking_id": "63a704cf-4701-41dd-987d-03b5daddf2fd"
+  },
+  "message_id": 0,
+  "redact_message": null,
+  "created_at": "2026-10-28T11:10:06.931493+00:00",
+  "updated_at": "2026-10-28T11:10:06.931494+00:00"
+}

@@ -1,0 +1,143 @@
+╭──────────────────────────── 🤖 LiteAgent Started ────────────────────────────╮
+│                                                                              │
+│  LiteAgent Started                                                           │
+│  Role: 현장 이슈 비서                                                        │
+│  Status: In Progress                                                         │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────── 🤖 LiteAgent Started ────────────────────────────╮
+│                                                                              │
+│  LiteAgent Session Started                                                   │
+│  Name: 현장 이슈 비서                                                        │
+│  id: 9b2c60ac-a2cf-41a7-9f4d-ec81a56e8a41                                    │
+│  role: 현장 이슈 비서                                                        │
+│  goal: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고 추측하지     │
+│  않습니다.                                                                   │
+│  backstory: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고         │
+│  추측하지 않습니다.                                                          │
+│  tools: search_issues, get_issue, list_crew                                  │
+│  verbose: False                                                              │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#1) ───────────────────────╮
+│                                                                              │
+│  Tool: search_issues                                                         │
+│  Args: {'level': '3F', 'trade': 'electrical', 'status': 'open'}              │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#2) ───────────────────────╮
+│                                                                              │
+│  Tool: search_issues                                                         │
+│  Args: {'level': '3F', 'trade': 'electrical', 'status': 'in_progress'}       │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#1) ───────────────────────╮
+│                                                                              │
+│  Tool: list_crew                                                             │
+│  Args: {'trade': 'electrical'}                                               │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Tool Execution Completed (#2) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: search_issues                                                         │
+│  Output: [{'id': 'ISS-017', 'title': '3층 복도 조명 회로 단선', 'level':     │
+│  '3F', 'trade': 'electrical', 'status': 'open', 'severity': 'high'}, {'id':  │
+│  'ISS-021', 'title': '3층 B구역 분전반 결선 오류', 'level': '3F', 'trade':   │
+│  'electrical', 'status': 'open', 'severity': 'critical'}]                    │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Tool Execution Completed (#2) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: search_issues                                                         │
+│  Output: [{'id': 'ISS-014', 'title': '3층 A구역 케이블 트레이 접지 누락',    │
+│  'level': '3F', 'trade': 'electrical', 'status': 'in_progress', 'severity':  │
+│  'critical'}, {'id': 'ISS-024', 'title': '3층 C구역 콘센트 높이 불일치',     │
+│  'level': '3F', 'trade': 'electrical', 'status': 'in_progress', 'severity':  │
+│  'medium'}]                                                                  │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────── ✅ Tool Execution Completed (#1) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: list_crew                                                             │
+│  Output: [{'name': '김민수', 'trade': 'electrical', 'open_assignments': 3},  │
+│  {'name': '박지훈', 'trade': 'electrical', 'open_assignments': 2}, {'name':  │
+│  '이서연', 'trade': 'electrical', 'open_assignments': 1}, {'name':           │
+│  '최유진', 'trade': 'electrical', 'open_assignments': 4}]                    │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#2) ───────────────────────╮
+│                                                                              │
+│  Tool: get_issue                                                             │
+│  Args: {'issue_id': 'ISS-021'}                                               │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────── 🔧 Tool Execution Started (#1) ───────────────────────╮
+│                                                                              │
+│  Tool: get_issue                                                             │
+│  Args: {'issue_id': 'ISS-014'}                                               │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────── ✅ Tool Execution Completed (#2) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: get_issue                                                             │
+│  Output: {'id': 'ISS-014', 'title': '3층 A구역 케이블 트레이 접지 누락',     │
+│  'level': '3F', 'zone': 'A', 'trade': 'electrical', 'status':                │
+│  'in_progress', 'severity': 'critical', 'created_at': '2026-10-14',          │
+│  'assignee': '박지훈', 'description': 'A구역 케이블 트레이 12m 구간의 접지   │
+│  본딩이 누락되었다.'}                                                        │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────── ✅ Tool Execution Completed (#2) ──────────────────────╮
+│                                                                              │
+│  Tool Completed                                                              │
+│  Tool: get_issue                                                             │
+│  Output: {'id': 'ISS-021', 'title': '3층 B구역 분전반 결선 오류', 'level':   │
+│  '3F', 'zone': 'B', 'trade': 'electrical', 'status': 'open', 'severity':     │
+│  'critical', 'created_at': '2026-10-20', 'assignee': None, 'description':    │
+│  'B구역 분전반의 상 결선이 도면과 다르다.'}                                  │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+
+╭─────────────────────────── ✅ LiteAgent Completed ───────────────────────────╮
+│                                                                              │
+│  LiteAgent Completed                                                         │
+│  Role: 현장 이슈 비서                                                        │
+│  id: 9b2c60ac-a2cf-41a7-9f4d-ec81a56e8a41                                    │
+│  role: 현장 이슈 비서                                                        │
+│  goal: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고 추측하지     │
+│  않습니다.                                                                   │
+│  backstory: 당신은 건설 현장 이슈 비서입니다. 확인한 정보만 사용하고         │
+│  추측하지 않습니다.                                                          │
+│  tools: search_issues, get_issue, list_crew                                  │
+│  verbose: False                                                              │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+

@@ -1,0 +1,46 @@
+{
+ "run_id": "f1-strands-1-1028182614",
+ "batch": "dev",
+ "task": "f1",
+ "candidate": "strands",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 13.45,
+ "success": true,
+ "fields": {
+  "open_count": true,
+  "critical_ids": true,
+  "top_priority_issue_id": true,
+  "recommended_assignee": true
+ },
+ "got": {
+  "open_count": 4,
+  "critical_ids": [
+   "ISS-014",
+   "ISS-021"
+  ],
+  "top_priority_issue_id": "ISS-014",
+  "recommended_assignee": "이서연"
+ },
+ "expected": {
+  "open_count": 4,
+  "critical_ids": [
+   "ISS-014",
+   "ISS-021"
+  ],
+  "top_priority_issue_id": "ISS-014",
+  "recommended_assignee": "이서연"
+ },
+ "llm_calls": 3,
+ "input_tokens": 6744,
+ "output_tokens": 753,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 0,
+ "cost": 0.042036,
+ "first_input_tokens": 1638,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

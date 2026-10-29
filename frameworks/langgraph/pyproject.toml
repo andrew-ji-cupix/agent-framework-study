@@ -1,0 +1,5 @@
+[project]
+name = "fw-langgraph"
+version = "0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["langchain>=1", "langchain-openai", "langgraph>=1", "langgraph-checkpoint-sqlite"]

@@ -1,0 +1,43 @@
+{
+ "run_id": "f3-strands-2-1028200956",
+ "batch": "final",
+ "task": "f3",
+ "candidate": "strands",
+ "rep": 2,
+ "returncode": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "wall_secs": 20.61,
+ "success": true,
+ "approve": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "reject": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "llm_calls": 8,
+ "input_tokens": 7759,
+ "output_tokens": 526,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 18,
+ "cost": 0.041556,
+ "first_input_tokens": 889,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [
+  "proxy: ClientConnectionResetError: Cannot write to closing transport"
+ ]
+}

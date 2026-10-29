@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-adk-1-1028214456",
+ "batch": "final",
+ "task": "l4",
+ "candidate": "adk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 30.53,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 2,
+ "llm_calls": 7,
+ "input_tokens": 18167,
+ "output_tokens": 1940,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 70,
+ "cost": 0.111468,
+ "first_input_tokens": 2085,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

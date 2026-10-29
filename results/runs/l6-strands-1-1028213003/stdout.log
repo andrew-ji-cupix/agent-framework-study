@@ -1,0 +1,43 @@
+
+Tool #1: skills
+
+Tool #2: search_issues
+
+Tool #3: list_crew
+
+Tool #4: get_progress
+Open/in progress: 014, 017, 021, 024 = 4. Critical: 014, 021 → need created_at.
+Tool #5: get_issue
+
+Tool #6: get_issue
+I'm tallying the delays by trade—electrical at 15 days, plumbing at 12, structural at 5, fire at 5, and finishing at 3—and I should keep the output as a factual report following the required format rather than a plain list.
+
+[주간 리포트] 3F 전기
+미해결: 4건
+최우선: ISS-014
+담당 추천: 이서연
+지연 공종: 전기 15%p, 설비 12%p
+3층 전기 공종에는 아직 해결되지 않은 이슈가 4건 있습니다(진행 중 2건, 미착수 2건). 이 중 심각도 critical인 이슈는 ISS-014(A구역 케이블 트레이 접지 누락, 10월 14일 생성)와 ISS-021(B구역 분전반 결선 오류, 10월 20일 생성)입니다. ISS-021은 아직 담당자가 없습니다. 10월 26일 기준으로 3층 전기 공정은 계획 55% 대비 실적 40%이고, 설비 공정은 계획 60% 대비 실적 48%입니다.
+문서번호: WR-3F-EL
+
+- 최우선 이슈: critical 이슈가 2건이라 생성일이 더 이른 ISS-014를 골랐습니다.
+- 담당 추천: 전기 작업자 중 이서연의 현재 배정이 1건으로 가장 적습니다. 나머지는 박지훈 2건, 김민수 3건, 최유진 4건입니다.
+- 지연 공종: 다른 공종은 지연 폭이 10%p 미만이라 넣지 않았습니다(골조 5%p, 소방 5%p, 마감 3%p).
+Tool #1: skills
+My summary draft has four sentences but I need to trim it to two or three, so I'll condense the ISS-021 and date-reference lines together. The numbers check out fine.
+
+[주간 리포트] 3F 전기
+미해결: 4건
+최우선: ISS-014
+담당 추천: 이서연
+지연 공종: 전기 15%p, 설비 12%p
+3층 전기 공종의 미해결 이슈는 4건(진행 중 2건, 미착수 2건)이며, 이 중 critical 이슈는 ISS-014(A구역 케이블 트레이 접지 누락, 10월 14일 생성)와 ISS-021(B구역 분전반 결선 오류, 10월 20일 생성)입니다. ISS-021은 아직 담당자가 없어 배정이 필요합니다. 10월 26일 기준 3층 공정률은 전기가 계획 55% 대비 실적 40%, 설비가 계획 60% 대비 실적 48%입니다.
+문서번호: WR-3F-ELI should check the skill first to see what rules apply here.
+
+
+Tool #1: skills
+I'm checking the delay calculations (15 and 12, both correctly sorted) and confirming ISS-014 is the highest priority item since it's marked critical and earliest. The summary should stay to three sentences with the WR-3F-EL document number included.
+
+The assignee recommendation isn't verifiable since no analyst facts were given beyond what's provided, but the format only calls for a simple 승인 response, so that's what I'll output.
+
+승인

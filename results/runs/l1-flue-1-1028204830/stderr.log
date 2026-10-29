@@ -1,0 +1,22 @@
+(node:1) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ▗  flue run
+ ▚  agent     IssueAssistant
+ ▘  id        01M615E8SM8RG4DH7TNZ2CF2K1
+    db        node_modules/.cache/flue/run.db
+
+user
+  다음 현장 보고를 읽고 공종과 심각도를 판단하세요.
+  
+  보고: 3층 B구역 분전반의 상 결선이 도면과 다릅니다. 이대로 통전하면 화재 위험이 있습니다.
+  
+  - 공종은 electrical, plumbing, structural, finishing, fire_protection 중 하나입니다.
+  - 심각도는 critical, high, medium, low 중 하나입니다. 화재·감전·붕괴 위험이 있으면 critical입니다.
+  - 답은 한 줄로 쓰세요: `공종=<값>, 심각도=<값>`
+
+assistant
+  공종=electrical, 심각도=critical
+
+    id        01M615E8SM8RG4DH7TNZ2CF2K1
+    uid       inst_01M615E8X111ZND2BCQA0TC0V9
+done agent completed

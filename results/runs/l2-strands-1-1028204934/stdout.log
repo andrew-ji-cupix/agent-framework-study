@@ -1,0 +1,15 @@
+
+Tool #1: search_issues
+
+Tool #2: search_issues
+
+Tool #3: list_crew
+
+Tool #4: get_issue
+
+Tool #5: get_issue
+ISS-014 is the most urgent and is already assigned to 박지훈, which seems worth noting even though the user wants a one-line answer. I'll stick to the single line as requested, but it's worth considering whether a brief parenthetical about the existing assignment adds necessary clarity.
+
+최우선=ISS-014, 담당자=이서연
+
+참고: ISS-014(critical, 2026-10-14 생성)는 이미 박지훈 님이 맡아 진행 중입니다. 이서연 님은 전기 작업자 중 배정 건수가 1건으로 가장 적어 추천했습니다.

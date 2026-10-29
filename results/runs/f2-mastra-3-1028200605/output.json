@@ -1,0 +1,54 @@
+{
+ "delayed_trades": [
+  {
+   "level": "1F",
+   "trade": "fire_protection",
+   "gap": 18
+  },
+  {
+   "level": "3F",
+   "trade": "electrical",
+   "gap": 15
+  },
+  {
+   "level": "1F",
+   "trade": "electrical",
+   "gap": 14
+  },
+  {
+   "level": "4F",
+   "trade": "structural",
+   "gap": 14
+  },
+  {
+   "level": "3F",
+   "trade": "plumbing",
+   "gap": 12
+  },
+  {
+   "level": "4F",
+   "trade": "fire_protection",
+   "gap": 10
+  }
+ ],
+ "critical_by_level": [
+  {
+   "level": "1F",
+   "count": 1
+  },
+  {
+   "level": "2F",
+   "count": 1
+  },
+  {
+   "level": "3F",
+   "count": 3
+  },
+  {
+   "level": "4F",
+   "count": 1
+  }
+ ],
+ "focus_level": "3F",
+ "summary": "2026-10-26 기준으로 계획보다 10%p 이상 늦어진 공종은 1F, 3F, 4F에 2건씩 모두 6건이고, 가장 크게 늦어진 공종은 1F 소방(18%p)입니다. 미해결 critical 이슈는 4개 층에 걸쳐 6건이며, 이번 주라는 기간 조건을 정할 수 없어 현재 미해결인 이슈 전체를 셌습니다. 3F는 전기·설비 공종이 늦어진 데다 critical 이슈도 3건(접지 누락, 급수 본관 누수, 분전반 결선 오류)으로 가장 많아 합계 5로 집중 관리 대상입니다. ISS-004(1F 방화셔터), ISS-010(2F 누전), ISS-021(3F 분전반)은 담당자가 정해지지 않아 바로 배정해야 하고, 2F 전기는 9%p 늦어져 기준에 가까우니 다음 주에 다시 확인해야 합니다."
+}

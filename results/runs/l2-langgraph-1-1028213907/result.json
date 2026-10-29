@@ -1,0 +1,27 @@
+{
+ "run_id": "l2-langgraph-1-1028213907",
+ "batch": "final",
+ "task": "l2",
+ "candidate": "langgraph",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 9.03,
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연\n\n3층 전기 공종의 미해결 이슈는 4건입니다. 이 중 심각도가 critical인 이슈는 ISS-014(10월 14일 생성, 진행 중)와 ISS-021(10월 20일 생성, 미착수) 두 건입니다. 심각도가 같아서 더 먼저 생성된 ISS-014를 최우선으로 골랐습니다. 이서연은 현재 배정 건수가 1건으로 전기 작업자 중 가",
+ "llm_calls": 3,
+ "input_tokens": 5046,
+ "output_tokens": 618,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 0,
+ "cost": 0.032544,
+ "first_input_tokens": 1064,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

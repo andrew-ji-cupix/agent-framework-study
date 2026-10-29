@@ -1,0 +1,31 @@
+{
+ "run_id": "l3-strands-1-1028205527",
+ "batch": "dev",
+ "task": "l3",
+ "candidate": "strands",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 11.13,
+ "llm_calls": 3,
+ "input_tokens": 6883,
+ "output_tokens": 803,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 13,
+ "cost": 0.043592,
+ "first_input_tokens": 1200,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true
+ },
+ "agents": 1,
+ "regraded": true
+}

@@ -1,0 +1,16 @@
+[
+  {"name": "김민수", "trade": "electrical", "open_assignments": 3},
+  {"name": "박지훈", "trade": "electrical", "open_assignments": 2},
+  {"name": "이서연", "trade": "electrical", "open_assignments": 1},
+  {"name": "최유진", "trade": "electrical", "open_assignments": 4},
+  {"name": "한도윤", "trade": "plumbing", "open_assignments": 2},
+  {"name": "오세린", "trade": "plumbing", "open_assignments": 1},
+  {"name": "장현우", "trade": "plumbing", "open_assignments": 3},
+  {"name": "윤재석", "trade": "structural", "open_assignments": 2},
+  {"name": "임하늘", "trade": "structural", "open_assignments": 4},
+  {"name": "송지아", "trade": "finishing", "open_assignments": 1},
+  {"name": "배준호", "trade": "finishing", "open_assignments": 2},
+  {"name": "강다은", "trade": "finishing", "open_assignments": 3},
+  {"name": "조민재", "trade": "fire_protection", "open_assignments": 1},
+  {"name": "신예린", "trade": "fire_protection", "open_assignments": 2}
+]

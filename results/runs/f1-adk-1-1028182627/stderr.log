@@ -1,0 +1,350 @@
+Node execution failed with exception
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/main.py", line 681, in acompletion
+    init_response: Final = await loop.run_in_executor(None, func_with_context)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/utils/_runner_utils.py", line 85, in __await__
+    value, error = (yield waiting_on), None
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1705, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/main.py", line 5297, in completion
+    from litellm.responses.mcp.chat_completions_handler import acompletion_with_mcp
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/responses/mcp/chat_completions_handler.py", line 10, in <module>
+    from litellm.responses.mcp.litellm_proxy_mcp_handler import (
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/responses/mcp/litellm_proxy_mcp_handler.py", line 13, in <module>
+    from litellm.proxy._experimental.mcp_server.catalog import catalog_operation, global_manager
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/proxy/_experimental/mcp_server/catalog.py", line 20, in <module>
+    from mcp.types import CacheableResult
+ModuleNotFoundError: No module named 'mcp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 169, in run
+    await self._execute_node(ctx, node_input)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 364, in _execute_node
+    await self._run_node_loop(ctx, node_input)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 378, in _run_node_loop
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_base_node.py", line 202, in run
+    item = await anext(agen, _sentinel)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 690, in _run_impl
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_llm_agent_wrapper.py", line 527, in run_llm_agent_as_node
+    async for event in run_iter:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 381, in run_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 482, in _run_with_lifecycle
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 166, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 154, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 445, in _run
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 639, in _run_async_impl
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 299, in run_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 381, in _run_one_step_async
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 564, in _call_llm_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 322, in call_llm_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 166, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 154, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 283, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 614, in _run_and_handle_error
+    async for response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 429, in run_and_handle_error
+    raise model_error
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 403, in run_and_handle_error
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/utils/_runner_utils.py", line 52, in _stream_in_caller_scope
+    item = await _InContext(ctx, agen.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/utils/_runner_utils.py", line 81, in __await__
+    waiting_on = self._ctx.run(coro.throw, error)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 391, in _record_responses
+    async for llm_response in timed:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 1012, in time_model_awaits
+    async for response in responses:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 4631, in generate_content_async
+    response = await self.llm_client.acompletion(**completion_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 1188, in acompletion
+    return await acompletion(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 102, in acompletion
+    return await _ADISPATCH.arun(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 114, in arun
+    return await python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/utils.py", line 2297, in wrapper_async
+    raise e
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/utils.py", line 2112, in wrapper_async
+    result = await original_function(*args, **call_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/main.py", line 740, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2666, in exception_type
+    _map_openrouter_exception(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2228, in _map_openrouter_exception
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: APIConnectionError: OpenrouterException - No module named 'mcp'
+Root node triage failed.
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner_utils.py", line 267, in _drive_root_node
+    await root_ctx._run_node_internal(  # pylint: disable=protected-access
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/context.py", line 520, in _run_node_internal
+    return await _dynamic_node_scheduler.run_node_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_dynamic_node_scheduler.py", line 840, in run_node_internal
+    raise DynamicNodeFailError(
+google.adk.workflow._errors.DynamicNodeFailError: Dynamic node triage failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 894, in _cleanup_root_task
+    await task
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner_utils.py", line 276, in _drive_root_node
+    raise e.error
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 169, in run
+    await self._execute_node(ctx, node_input)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 364, in _execute_node
+    await self._run_node_loop(ctx, node_input)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 378, in _run_node_loop
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_base_node.py", line 202, in run
+    item = await anext(agen, _sentinel)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 690, in _run_impl
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_llm_agent_wrapper.py", line 527, in run_llm_agent_as_node
+    async for event in run_iter:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 381, in run_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 482, in _run_with_lifecycle
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 166, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 154, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 445, in _run
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 639, in _run_async_impl
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 299, in run_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 381, in _run_one_step_async
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 564, in _call_llm_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 322, in call_llm_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 166, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 154, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 283, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 614, in _run_and_handle_error
+    async for response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 429, in run_and_handle_error
+    raise model_error
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 403, in run_and_handle_error
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/utils/_runner_utils.py", line 52, in _stream_in_caller_scope
+    item = await _InContext(ctx, agen.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/utils/_runner_utils.py", line 81, in __await__
+    waiting_on = self._ctx.run(coro.throw, error)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 391, in _record_responses
+    async for llm_response in timed:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 1012, in time_model_awaits
+    async for response in responses:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 4631, in generate_content_async
+    response = await self.llm_client.acompletion(**completion_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 1188, in acompletion
+    return await acompletion(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 102, in acompletion
+    return await _ADISPATCH.arun(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 114, in arun
+    return await python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/utils.py", line 2297, in wrapper_async
+    raise e
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/utils.py", line 2112, in wrapper_async
+    result = await original_function(*args, **call_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/main.py", line 740, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2666, in exception_type
+    _map_openrouter_exception(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2228, in _map_openrouter_exception
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: APIConnectionError: OpenrouterException - No module named 'mcp'
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner_utils.py", line 267, in _drive_root_node
+    await root_ctx._run_node_internal(  # pylint: disable=protected-access
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/context.py", line 520, in _run_node_internal
+    return await _dynamic_node_scheduler.run_node_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_dynamic_node_scheduler.py", line 840, in run_node_internal
+    raise DynamicNodeFailError(
+google.adk.workflow._errors.DynamicNodeFailError: Dynamic node triage failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/f1.py", line 35, in <module>
+    asyncio.run(main())
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/f1.py", line 29, in main
+    async for event in runner.run_async(user_id="u", session_id=session.id, new_message=message):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 1232, in run_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 610, in _run_node_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner_utils.py", line 382, in run_node_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 166, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 154, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner_utils.py", line 300, in _run
+    await runner._cleanup_root_task(  # pylint: disable=protected-access
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 894, in _cleanup_root_task
+    await task
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner_utils.py", line 276, in _drive_root_node
+    raise e.error
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 169, in run
+    await self._execute_node(ctx, node_input)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 364, in _execute_node
+    await self._run_node_loop(ctx, node_input)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 378, in _run_node_loop
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_base_node.py", line 202, in run
+    item = await anext(agen, _sentinel)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 690, in _run_impl
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/workflow/_llm_agent_wrapper.py", line 527, in run_llm_agent_as_node
+    async for event in run_iter:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 381, in run_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 482, in _run_with_lifecycle
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 166, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 154, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 445, in _run
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 639, in _run_async_impl
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 299, in run_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 381, in _run_one_step_async
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 564, in _call_llm_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 322, in call_llm_async
+    async for event in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 166, in stream_in_scope
+    item = await _drive(owned.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 154, in _drive
+    return await step
+           ^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_model_call.py", line 283, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 614, in _run_and_handle_error
+    async for response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 429, in run_and_handle_error
+    raise model_error
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 403, in run_and_handle_error
+    async for llm_response in agen:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/utils/_runner_utils.py", line 52, in _stream_in_caller_scope
+    item = await _InContext(ctx, agen.__anext__())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/utils/_runner_utils.py", line 81, in __await__
+    waiting_on = self._ctx.run(coro.throw, error)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/core/_finalizer.py", line 391, in _record_responses
+    async for llm_response in timed:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/telemetry/_instrumentation.py", line 1012, in time_model_awaits
+    async for response in responses:
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 4631, in generate_content_async
+    response = await self.llm_client.acompletion(**completion_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/google/adk/models/lite_llm.py", line 1188, in acompletion
+    return await acompletion(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 102, in acompletion
+    return await _ADISPATCH.arun(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 114, in arun
+    return await python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/utils.py", line 2297, in wrapper_async
+    raise e
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/utils.py", line 2112, in wrapper_async
+    result = await original_function(*args, **call_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/main.py", line 740, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2666, in exception_type
+    _map_openrouter_exception(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2228, in _map_openrouter_exception
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: APIConnectionError: OpenrouterException - No module named 'mcp'

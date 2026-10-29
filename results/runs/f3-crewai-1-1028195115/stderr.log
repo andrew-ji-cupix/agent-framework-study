@@ -1,0 +1,108 @@
+### approve start (rc=0)
+Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+### approve resume approve (rc=1)
+Error executing listener execute: 'AssignFlow' object has no attribute 'human_feedback'
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/f3.py", line 57, in <module>
+    save_final(flow.resume("approve" if APPROVED else REJECT_MESSAGE))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 1399, in resume
+    return asyncio.run(self.resume_async(feedback))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 1448, in resume_async
+    return await self._resume_async_body(feedback, hook_state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 1596, in _resume_async_body
+    await self._execute_listeners(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3294, in _execute_listeners
+    await asyncio.gather(*tasks)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3436, in _execute_single_listener
+    listener_result, finished_event_id = await self._execute_method(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3107, in _execute_method
+    raise e
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3004, in _execute_method
+    result = await asyncio.to_thread(ctx.run, method, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/flow_wrappers.py", line 101, in __call__
+    return self._meth(self._instance, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/f3.py", line 43, in execute
+    proposal = self.human_feedback.output
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/pydantic/main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AssignFlow' object has no attribute 'human_feedback'. Did you mean: 'last_human_feedback'?
+### reject start (rc=0)
+Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+WARNING:crewai.llms.base_llm:Using an approximate input token count for model 'anthropic/claude-opus-5.5': assuming one token per four characters because a native token count is unavailable.
+### reject resume reject (rc=1)
+Error executing listener execute: 'AssignFlow' object has no attribute 'human_feedback'
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/f3.py", line 57, in <module>
+    save_final(flow.resume("approve" if APPROVED else REJECT_MESSAGE))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 1399, in resume
+    return asyncio.run(self.resume_async(feedback))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 1448, in resume_async
+    return await self._resume_async_body(feedback, hook_state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 1596, in _resume_async_body
+    await self._execute_listeners(
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3294, in _execute_listeners
+    await asyncio.gather(*tasks)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3436, in _execute_single_listener
+    listener_result, finished_event_id = await self._execute_method(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3107, in _execute_method
+    raise e
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py", line 3004, in _execute_method
+    result = await asyncio.to_thread(ctx.run, method, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/crewai/flow/flow_wrappers.py", line 101, in __call__
+    return self._meth(self._instance, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/f3.py", line 43, in execute
+    proposal = self.human_feedback.output
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/crewai/.venv/lib/python3.12/site-packages/pydantic/main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AssignFlow' object has no attribute 'human_feedback'. Did you mean: 'last_human_feedback'?

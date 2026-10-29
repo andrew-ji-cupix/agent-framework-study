@@ -1,0 +1,15 @@
+
+Tool #1: search_issues
+
+Tool #2: search_issues
+
+Tool #3: list_crew
+Two criticals: ISS-014, ISS-021. Need created_at.
+Tool #4: get_issue
+
+Tool #5: get_issue
+이서연이 할당 건수가 가장 적은 담당자네. ISS-014는 이미 박지훈에게 배정되어 있지만, 규칙대로라면 답은 이서연이 되어야 한다. 사용자가 한 줄 답변을 요청했으니 간결하게 답해야겠다.
+
+최우선=ISS-014, 담당자=이서연
+
+ISS-014는 ISS-021과 같은 critical 등급이지만 더 일찍 생성됐습니다(10-14, ISS-021은 10-20). 이서연은 배정 건수가 1건으로 가장 적습니다. 다만 ISS-014에는 이미 박지훈이 배정되어 있습니다.

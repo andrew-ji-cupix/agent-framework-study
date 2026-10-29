@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-deepagents-1-1028220152",
+ "batch": "final",
+ "task": "l6",
+ "candidate": "deepagents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 71.08,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 4,
+ "llm_calls": 12,
+ "input_tokens": 80485,
+ "output_tokens": 6396,
+ "cache_read": 52999,
+ "cache_write": 27454,
+ "reasoning_tokens": 0,
+ "cost": 0.275918,
+ "first_input_tokens": 4946,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

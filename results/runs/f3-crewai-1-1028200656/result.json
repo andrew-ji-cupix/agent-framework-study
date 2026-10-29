@@ -1,0 +1,41 @@
+{
+ "run_id": "f3-crewai-1-1028200656",
+ "batch": "final",
+ "task": "f3",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "wall_secs": 28.63,
+ "success": true,
+ "approve": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "reject": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "llm_calls": 8,
+ "input_tokens": 8300,
+ "output_tokens": 891,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 51,
+ "cost": 0.05102,
+ "first_input_tokens": 909,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

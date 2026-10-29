@@ -1,0 +1,12 @@
+{"run_id": "h1-claude-agent-sdk-1-1028184653", "success": true, "returncode": 0, "wall_secs": 23.55, "llm_calls": 4, "input_tokens": 78345, "output_tokens": 1658, "cost": 0.055248, "http_errors": [], "error": null}
+{"run_id": "h1-deepagents-1-1028184717", "success": true, "returncode": 0, "wall_secs": 18.99, "llm_calls": 4, "input_tokens": 25965, "output_tokens": 1278, "cost": 0.033042, "http_errors": [], "error": null}
+{"run_id": "h1-pi-1-1028184736", "success": true, "returncode": 0, "wall_secs": 14.29, "llm_calls": 4, "input_tokens": 17797, "output_tokens": 975, "cost": 0.025017, "http_errors": [], "error": null}
+{"run_id": "h1-flue-1-1028184751", "success": true, "returncode": 0, "wall_secs": 16.12, "llm_calls": 4, "input_tokens": 15514, "output_tokens": 1186, "cost": 0.043411, "http_errors": [], "error": null}
+{"run_id": "h1-claude-agent-sdk-2-1028184807", "success": true, "returncode": 0, "wall_secs": 19.67, "llm_calls": 4, "input_tokens": 77668, "output_tokens": 1521, "cost": 0.06085, "http_errors": [], "error": null}
+{"run_id": "h1-deepagents-2-1028184827", "success": true, "returncode": 0, "wall_secs": 16.74, "llm_calls": 4, "input_tokens": 25921, "output_tokens": 1076, "cost": 0.028782, "http_errors": [], "error": null}
+{"run_id": "h1-pi-2-1028184845", "success": true, "returncode": 0, "wall_secs": 15.04, "llm_calls": 4, "input_tokens": 17824, "output_tokens": 1047, "cost": 0.026592, "http_errors": [], "error": null}
+{"run_id": "h1-flue-2-1028184900", "success": true, "returncode": 0, "wall_secs": 15.02, "llm_calls": 4, "input_tokens": 15463, "output_tokens": 1113, "cost": 0.041802, "http_errors": [], "error": null}
+{"run_id": "h1-claude-agent-sdk-3-1028184915", "success": true, "returncode": 0, "wall_secs": 19.01, "llm_calls": 4, "input_tokens": 77901, "output_tokens": 1439, "cost": 0.065088, "http_errors": [], "error": null}
+{"run_id": "h1-deepagents-3-1028184935", "success": true, "returncode": 0, "wall_secs": 17.02, "llm_calls": 4, "input_tokens": 25861, "output_tokens": 1027, "cost": 0.027502, "http_errors": [], "error": null}
+{"run_id": "h1-pi-3-1028184952", "success": true, "returncode": 0, "wall_secs": 15.35, "llm_calls": 4, "input_tokens": 17837, "output_tokens": 1045, "cost": 0.026617, "http_errors": [], "error": null}
+{"run_id": "h1-flue-3-1028185008", "success": true, "returncode": 0, "wall_secs": 14.16, "llm_calls": 4, "input_tokens": 15407, "output_tokens": 1007, "cost": 0.039402, "http_errors": [], "error": null}

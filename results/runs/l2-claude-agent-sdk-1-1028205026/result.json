@@ -1,0 +1,28 @@
+{
+ "run_id": "l2-claude-agent-sdk-1-1028205026",
+ "batch": "dev",
+ "task": "l2",
+ "candidate": "claude-agent-sdk",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 12.26,
+ "llm_calls": 4,
+ "input_tokens": 73676,
+ "output_tokens": 685,
+ "cache_read": 68094,
+ "cache_write": 5574,
+ "reasoning_tokens": 0,
+ "cost": 0.055221,
+ "first_input_tokens": 17389,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": [],
+ "success": true,
+ "checks": {
+  "top_priority": true,
+  "assignee": true
+ },
+ "answer": "최우선=ISS-014, 담당자=이서연",
+ "regraded": true
+}

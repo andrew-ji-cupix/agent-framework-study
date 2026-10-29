@@ -1,0 +1,23 @@
+{
+  "message": {
+    "role": "user",
+    "content": [
+      {
+        "toolResult": {
+          "toolUseId": "toolu_01E8UfSz24uyQ2A6BDBrwP3L",
+          "status": "success",
+          "content": [
+            {
+              "text": "{\"id\": \"ISS-021\", \"title\": \"3층 B구역 분전반 결선 오류\", \"level\": \"3F\", \"zone\": \"B\", \"trade\": \"electrical\", \"status\": \"open\", \"severity\": \"critical\", \"created_at\": \"2026-10-20\", \"assignee\": null, \"description\": \"B구역 분전반의 상 결선이 도면과 다르다.\"}"
+            }
+          ]
+        }
+      }
+    ],
+    "tracking_id": "397bab24-baa1-403c-a0f9-950d2e2e8cc0"
+  },
+  "message_id": 2,
+  "redact_message": null,
+  "created_at": "2026-10-28T10:51:58.056071+00:00",
+  "updated_at": "2026-10-28T10:51:58.056075+00:00"
+}

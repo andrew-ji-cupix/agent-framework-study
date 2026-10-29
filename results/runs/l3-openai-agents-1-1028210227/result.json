@@ -1,0 +1,30 @@
+{
+ "run_id": "l3-openai-agents-1-1028210227",
+ "batch": "dev",
+ "task": "l3",
+ "candidate": "openai-agents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 37.22,
+ "success": false,
+ "checks": {
+  "first_line": false,
+  "unresolved": false,
+  "top_priority": false,
+  "assignee": false,
+  "doc_number_last": false
+ },
+ "agents": 1,
+ "llm_calls": 5,
+ "input_tokens": 44453,
+ "output_tokens": 2014,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 230,
+ "cost": 0.218092,
+ "first_input_tokens": 7432,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

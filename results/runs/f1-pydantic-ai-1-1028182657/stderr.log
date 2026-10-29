@@ -1,0 +1,104 @@
+                 pydantic-ai v2.63.0 • Python 3.12.12
+
+      / \        agent: agent • model: openai:anthropic/claude-opus-5.5 • output: TriageReport
+     /   \         tools: 3 • capabilities: 0
+   /___.___\
+  /    |    \    observability: off — see every model and tool call live, with cost
+/      |      \    set it up free with Pydantic Logfire: uvx logfire-cli wizard --task pydantic-ai
+`---.._|_..---'    or use any OpenTelemetry backend: https://pydantic.dev/docs/ai/logfire/#otel
+
+                 goes away once observability is on — or PYDANTIC_AI_NO_BANNER=1
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/models/openai.py", line 265, in _map_api_errors
+    yield
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/models/openai.py", line 1736, in _completions_create
+    return await with_max_retries(self.client, model_settings).chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 2982, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 2093, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1878, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - Provider returned error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/f1.py", line 18, in <module>
+    save(agent.run_sync(PROMPT).output)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/agent/abstract.py", line 842, in run_sync
+    return _utils.run_until_complete(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/_utils.py", line 108, in run_until_complete
+    return _graph_run_until_complete(coro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_graph/_utils.py", line 116, in run_until_complete
+    return loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/agent/abstract.py", line 686, in run
+    node = await agent_run.next(node)  # pyright: ignore[reportArgumentType]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/run.py", line 656, in next
+    return await self._run_node_with_hooks(node, self._stream_and_advance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/run.py", line 571, in _run_node_with_hooks
+    result = await lifecycle(node)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/run.py", line 551, in lifecycle
+    result = await step_fn(lifecycle_node)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/run.py", line 670, in _stream_and_advance
+    return await self._advance_graph(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/run.py", line 466, in _advance_graph
+    task = await self._graph_run.next(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_graph/graph_builder.py", line 589, in next
+    return await anext(self)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_graph/graph_builder.py", line 566, in __anext__
+    raise self._next.error
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_graph/graph_builder.py", line 856, in _run_tracked_task
+    result = await self._run_task(t_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_graph/graph_builder.py", line 914, in _run_task
+    output = await node.call(step_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_graph/step.py", line 253, in _call_node
+    return await node.run(GraphRunContext(state=ctx.state, deps=ctx.deps))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/_agent_graph.py", line 1675, in run
+    return await self._make_request(ctx)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/_agent_graph.py", line 2098, in _make_request
+    model_response = await model_handler(request_context)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/_agent_graph.py", line 2081, in model_handler
+    response = await self._recover_model_request_error(ctx, run_context, req_ctx, e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/_agent_graph.py", line 2625, in _recover_model_request_error
+    raise error
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/_agent_graph.py", line 2057, in model_handler
+    response = await model_request(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/_agent_graph.py", line 1494, in model_request
+    new_response = await model.request(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/models/openai.py", line 1604, in request
+    response = await self._completions_create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/models/openai.py", line 1727, in _completions_create
+    with _map_api_errors(self.model_name, self._provider.model_id_namespace), map_decode_errors(self.model_name):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrew/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/pydantic-ai/.venv/lib/python3.12/site-packages/pydantic_ai/models/openai.py", line 268, in _map_api_errors
+    raise _map_status_error(e, model_name, model_id_namespace) from e
+pydantic_ai.exceptions.ModelRequestRejectedError: status_code: 400, model_name: anthropic/claude-opus-5.5, body: {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{"type":"error","error":{"type":"invalid_request_error","message":"tool_choice: type \\"tool\\" and \\"any\\" are not supported for this model."},"request_id":"req_011CgUPxnjsRfpED73Lg8ph9"}', 'provider_name': 'Azure', 'is_byok': False, 'previous_errors': [{'code': 400, 'message': 'Provider returned error', 'provider_name': 'Claude Platform on AWS', 'raw': '{"type":"error","error":{"type":"invalid_request_error","message":"tool_choice: type \\"tool\\" and \\"any\\" are not supported for this model."},"request_id":"req_011CgUPxZSvgbRiNSRdSZ5kS"}'}, {'code': 400, 'message': 'Provider returned error', 'provider_name': 'Amazon Bedrock', 'raw': '{"message":"tool_choice: type \\"tool\\" and \\"any\\" are not supported for this model."}'}, {'code': 400, 'message': 'Provider returned error', 'provider_name': 'Anthropic', 'raw': '{"type":"error","error":{"type":"invalid_request_error","message":"tool_choice: type \\"tool\\" and \\"any\\" are not supported for this model."},"request_id":"req_011CgUPxdtpQCceg3XzZW8LA"}'}, {'code': 400, 'message': 'Provider returned error', 'provider_name': 'Google', 'raw': '{"type":"error","error":{"type":"invalid_request_error","message":"tool_choice: type \\"tool\\" and \\"any\\" are not supported for this model."},"request_id":"req_vrtx_011CgUPxh458eWHNETq9uStX"}'}]}}

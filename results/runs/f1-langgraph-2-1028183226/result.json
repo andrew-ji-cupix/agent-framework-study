@@ -1,0 +1,21 @@
+{
+ "run_id": "f1-langgraph-2-1028183226",
+ "batch": "final",
+ "task": "f1",
+ "candidate": "langgraph",
+ "rep": 2,
+ "returncode": "timeout",
+ "wall_secs": 600.02,
+ "success": false,
+ "error": "출력 없음 또는 JSON 아님: [Errno 2] No such file or directory: '/Users/andrew/cupix-rnd/ax-study/agent-framework/results/runs/f1-langgraph-2-1028183226/output.json'",
+ "llm_calls": 0,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 0,
+ "cost": 0,
+ "first_input_tokens": null,
+ "api": [],
+ "http_errors": []
+}

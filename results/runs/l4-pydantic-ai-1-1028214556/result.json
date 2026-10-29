@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-pydantic-ai-1-1028214556",
+ "batch": "final",
+ "task": "l4",
+ "candidate": "pydantic-ai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 24.6,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 2,
+ "llm_calls": 5,
+ "input_tokens": 9986,
+ "output_tokens": 2159,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 193,
+ "cost": 0.083124,
+ "first_input_tokens": 1294,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

@@ -1,0 +1,4 @@
+/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/l6.py:33: DeprecationWarning: LoopAgent is deprecated in favor of Workflow and will be removed in a future version. Workflow cannot yet be used as an LlmAgent sub-agent.
+  team = SequentialAgent(name="team", sub_agents=[analyst, LoopAgent(name="write_review", sub_agents=[writer, reviewer],
+/Users/andrew/cupix-rnd/ax-study/agent-framework/frameworks/adk/l6.py:33: DeprecationWarning: SequentialAgent is deprecated in favor of Workflow and will be removed in a future version. Workflow cannot yet be used as an LlmAgent sub-agent.
+  team = SequentialAgent(name="team", sub_agents=[analyst, LoopAgent(name="write_review", sub_agents=[writer, reviewer],

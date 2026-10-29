@@ -1,0 +1,41 @@
+{
+ "run_id": "f3-mastra-1-1028200849",
+ "batch": "final",
+ "task": "f3",
+ "candidate": "mastra",
+ "rep": 1,
+ "returncode": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "wall_secs": 19.15,
+ "success": true,
+ "approve": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "reject": {
+  "paused_before_execution": true,
+  "pending_call_correct": true,
+  "resumed_in_new_process": true,
+  "executions_correct": true,
+  "finished": true
+ },
+ "llm_calls": 8,
+ "input_tokens": 9859,
+ "output_tokens": 606,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 22,
+ "cost": 0.051556,
+ "first_input_tokens": 991,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

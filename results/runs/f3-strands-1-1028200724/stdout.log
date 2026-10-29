@@ -1,0 +1,19 @@
+### approve start (rc=0)
+
+Tool #1: get_issue
+
+Tool #2: list_crew
+
+Tool #3: assign_issue
+### approve resume approve (rc=0)
+ISS-021(3층 B구역 분전반 결선 오류, 전기)을 전기 작업자 중 현재 배정 건수가 1건으로 가장 적은 이서연 님에게 배정했습니다.### reject start (rc=0)
+
+Tool #1: get_issue
+
+Tool #2: list_crew
+
+Tool #3: assign_issue
+### reject resume reject (rc=0)
+That was rejected, so I'll just report it briefly without retrying.
+
+ISS-021(3층 B구역 분전반 결선 오류, 전기 공종) 담당자로 현재 배정 건수가 1건으로 가장 적은 전기 작업자 이서연을 배정하려 했지만, 현장 관리자가 배정을 거절해 다시 시도하지 않았고 ISS-021은 아직 담당자가 없습니다.

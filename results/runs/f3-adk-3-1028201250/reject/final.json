@@ -1,0 +1,1 @@
+{"result": "ISS-021(3층 B구역 분전반 결선 오류, electrical) 담당자로 현재 배정 건수가 가장 적은 이서연(1건)을 배정하려 했지만, assign_issue 호출이 \"This tool call is rejected.\" 오류로 거부되어 배정은 되지 않았습니다."}

@@ -1,0 +1,27 @@
+{
+ "run_id": "l1-crewai-1-1028204749",
+ "batch": "dev",
+ "task": "l1",
+ "candidate": "crewai",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 5.51,
+ "success": true,
+ "checks": {
+  "trade": true,
+  "severity": true
+ },
+ "answer": "공종=electrical, 심각도=critical",
+ "llm_calls": 1,
+ "input_tokens": 345,
+ "output_tokens": 49,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 33,
+ "cost": 0.00236,
+ "first_input_tokens": 345,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": []
+}

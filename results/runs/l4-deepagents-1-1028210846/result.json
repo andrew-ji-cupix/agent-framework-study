@@ -1,0 +1,32 @@
+{
+ "run_id": "l4-deepagents-1-1028210846",
+ "batch": "dev",
+ "task": "l4",
+ "candidate": "deepagents",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 25.53,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "subagent_used": true
+ },
+ "agents": 2,
+ "llm_calls": 5,
+ "input_tokens": 28332,
+ "output_tokens": 2025,
+ "cache_read": 16330,
+ "cache_write": 11988,
+ "reasoning_tokens": 0,
+ "cost": 0.103762,
+ "first_input_tokens": 5304,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}

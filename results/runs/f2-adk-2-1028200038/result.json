@@ -1,0 +1,81 @@
+{
+ "run_id": "f2-adk-2-1028200038",
+ "batch": "final",
+ "task": "f2",
+ "candidate": "adk",
+ "rep": 2,
+ "returncode": 0,
+ "wall_secs": 30.6,
+ "llm_calls": 7,
+ "input_tokens": 15646,
+ "output_tokens": 3272,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 413,
+ "cost": 0.128024,
+ "first_input_tokens": 1591,
+ "api": [
+  "/api/v1/chat/completions"
+ ],
+ "http_errors": [],
+ "success": true,
+ "fields": {
+  "delayed_trades": true,
+  "critical_by_level": true,
+  "focus_level": true
+ },
+ "got": {
+  "delayed_trades": [
+   [
+    [
+     "1F",
+     "electrical"
+    ],
+    14
+   ],
+   [
+    [
+     "1F",
+     "fire_protection"
+    ],
+    18
+   ],
+   [
+    [
+     "3F",
+     "electrical"
+    ],
+    15
+   ],
+   [
+    [
+     "3F",
+     "plumbing"
+    ],
+    12
+   ],
+   [
+    [
+     "4F",
+     "fire_protection"
+    ],
+    10
+   ],
+   [
+    [
+     "4F",
+     "structural"
+    ],
+    14
+   ]
+  ],
+  "critical_by_level": {
+   "1F": 1,
+   "2F": 1,
+   "3F": 3,
+   "4F": 1
+  },
+  "focus_level": "3F"
+ },
+ "regraded": true
+}

@@ -1,0 +1,25 @@
+{
+ "run_id": "l2-langgraph-1-1029153235",
+ "batch": "handson",
+ "task": "l2",
+ "candidate": "langgraph",
+ "rep": 1,
+ "returncode": 1,
+ "wall_secs": 2.6,
+ "success": false,
+ "checks": {
+  "top_priority": false,
+  "assignee": false
+ },
+ "answer": "",
+ "llm_calls": 0,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cache_read": 0,
+ "cache_write": 0,
+ "reasoning_tokens": 0,
+ "cost": 0,
+ "first_input_tokens": null,
+ "api": [],
+ "http_errors": []
+}

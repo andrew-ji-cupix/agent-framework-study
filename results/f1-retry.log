@@ -1,0 +1,3 @@
+{"run_id": "f1-langgraph-1-1028185022", "success": true, "returncode": 0, "wall_secs": 11.87, "llm_calls": 3, "input_tokens": 7743, "output_tokens": 651, "cost": 0.043992, "http_errors": [], "error": null}
+{"run_id": "f1-langgraph-2-1028185034", "success": true, "returncode": 0, "wall_secs": 12.19, "llm_calls": 3, "input_tokens": 7743, "output_tokens": 680, "cost": 0.044572, "http_errors": [], "error": null}
+{"run_id": "f1-langgraph-3-1028185046", "success": true, "returncode": 0, "wall_secs": 13.27, "llm_calls": 3, "input_tokens": 7743, "output_tokens": 664, "cost": 0.044252, "http_errors": [], "error": null}

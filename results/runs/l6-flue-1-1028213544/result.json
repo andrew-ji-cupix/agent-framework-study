@@ -1,0 +1,32 @@
+{
+ "run_id": "l6-flue-1-1028213544",
+ "batch": "dev",
+ "task": "l6",
+ "candidate": "flue",
+ "rep": 1,
+ "returncode": 0,
+ "wall_secs": 70.83,
+ "success": true,
+ "checks": {
+  "first_line": true,
+  "unresolved": true,
+  "top_priority": true,
+  "assignee": true,
+  "doc_number_last": true,
+  "delay_line": true,
+  "team_of_3_or_more": true
+ },
+ "agents": 11,
+ "llm_calls": 11,
+ "input_tokens": 33376,
+ "output_tokens": 5690,
+ "cache_read": 19074,
+ "cache_write": 14272,
+ "reasoning_tokens": 0,
+ "cost": 0.189095,
+ "first_input_tokens": 1153,
+ "api": [
+  "/api/v1/messages"
+ ],
+ "http_errors": []
+}
